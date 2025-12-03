@@ -1,0 +1,115 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\renewcommand\IEEEkeywordsname{Keywords}
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+%\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{arydshln} % Paquete para líneas punteadas y sutiles
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{stfloats}  % Permite la figura* en el entorno de dos columnas
+
+%% instaldas nuevas **
+\usepackage{makecell} % Importa el paquete makecell
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{colortbl} % Para \rowcolor
+\usepackage{xcolor}   % Para definir colores personalizados
+%\usepackage{subfigure} 
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{lineno}
+\usepackage{pdfpages}
+\usepackage{lscape}
+\usepackage{booktabs}
+
+\usepackage{hyperref}
+% Es recomendable cargar cleveref después de otros paquetes como hyperref para evitar conflictos.
+
+\usepackage{cleveref}
+%\usepackage[spanish]{babel} % Para idioma español
+
+%%%%%%%%% ESPAÑOL %%%%%%%%%%%%%%%%%%%
+% \usepackage[spanish]{babel}   
+% \addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+% % Configuración de nombres en español
+% \crefname{section}{sección}{secciones}
+% \Crefname{section}{Sección}{Secciones}
+% \crefname{figure}{figura}{figuras}
+% \crefname{table}{tabla}{tablas}
+% %\crefname{equation}{ecuación}{ecuaciones}
+% \crefname{Figure}{Figura}{Figuras}
+% \crefname{Table}{Tabla}{Tablas}
+
+\captionsetup{labelfont=bf}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+% \title{COMUNICACIÓN HÍBRIDA RADIO-ÓPTICA PARA MEJORAR LOS SISTEMAS DE TELECOMUNICACIONES INDOOR\\
+% }
+\title{HYBRID RADIO-OPTICAL COMMUNICATION TO IMPROVE INDOOR TELECOMMUNICATIONS SYSTEMS}
+\author{\IEEEauthorblockN{1\textsuperscript{st} Juan Navarro-Restrepo}
+\IEEEauthorblockA{\small \textit{dept. Electronics and Telecommunications } \\
+\small \textit{Institución Universitaria ITM}\\
+\small Medellin, Colombia \\
+\small \href{https://orcid.org/0000-0002-6031-9940}{https://orcid.org/0000-0002-6031-9940}}
+\and
+\IEEEauthorblockN{2\textsuperscript{nd} Andrés Betancur-Pérez}
+\IEEEauthorblockA{\small \textit{dept. Electronics and Telecommunications } \\
+\small \textit{Institución Universitaria ITM}\\
+\small Medellin, Colombia \\
+\small \href{https://orcid.org/0000-0002-4738-8052}{https://orcid.org/0000-0002-4738-8052}}
+\and
+\IEEEauthorblockN{3\textsuperscript{rd} Roger Martínez-Ciro}
+\IEEEauthorblockA{\small \textit{dept. Electronics and Telecommunications } \\
+\small \textit{Institución Universitaria ITM}\\
+\small Medellin, Colombia \\
+\small \href{https://orcid.org/0000-0001-7592-1742}{https://orcid.org/0000-0001-7592-1742}}
+\and
+\IEEEauthorblockN{4\textsuperscript{th} Francisco López-Giraldo}
+\IEEEauthorblockA{\small \textit{dept. Electronics and Telecommunications } \\
+\small \textit{Institución Universitaria ITM}\\
+\small Medellin, Colombia \\
+\small \href{https://orcid.org/0000-0003-0446-4307}{https://orcid.org/0000-0003-0446-4307}}
+\and
+}
+
+\maketitle
+
+\begin{abstract}
+This paper experimentally proposes a hybrid system that combines Radio Frequency and Visible Light Communication technologies to mitigate signal non-uniformity in indoor environments. Additionally, it presents an experimental study on the degradation of the signal-to-noise ratio of a commercial broadcast signal at the frequency of 103.5 MHz. This analysis was carried out at different levels of the ITM University Institution in Medellín, including basements 1 and 2, and focused exclusively on signal reception.
+The results were compared with the initial measurements taken, showing that the pure RF signal, captured conventionally, had an average signal-to-noise ratio of 4.93 dB. After implementing the hybrid system, the average signal-to-noise ratio increased significantly to 36.9 dB. These results demonstrate the effectiveness of the technological convergence proposed in this study to improve signal quality in multiple demanding application scenarios, such as the Internet of Things, Smart Cities, Sustainable Mining, Indoor Positioning, Marine Environment Monitoring, and others.
+
+% Este trabajo plantea experimentalmente un sistema híbrido que combina tecnologías de Radio Frecuencia y Comunicación por Luz Visible para mitigar la no uniformidad de las señales en entornos interiores. Adicionalmente, se presenta un estudio experimental sobre la degradación de la relación señal ruido de una señal de radiodifusión comercial en la frecuencia de 103.5 MHz. Este análisis se llevó a cabo en diferentes niveles de la Institución Universitaria ITM de Medellín, incluyendo sótanos 1 y 2, y se centró exclusivamente en la recepción de la señal. 
+% Se compararon los resultados con las mediciones iniciales realizadas, se evidenció que la señal RF pura, captada convencionalmente; presentó una relación señal a ruido con media de 4.93 dB. Tras la implementación del sistema híbrido, la media de la relación señal a ruido aumentó significativamente hasta los 36.9 dB. Estos resultados demuestran la efectividad de la convergencia tecnológica propuesta en este estudio para mejorar la calidad de la señal en múltiples escenarios de aplicación de alta exigencia; como el Internet de las cosas, Ciudades Inteligentes, Posicionamiento en interiores, Minería Sostenible, Monitoreo Marino y otros.
+
+\end{abstract}
+\vspace{3pt}
+\begin{IEEEkeywords}
+ RF, VLC, SNR, Sombreado, Desvanecimiento profundo, Dispersión, Absorción Atmosferica.
+\end{IEEEkeywords}
+
+% \chapter{Introduction} \label{chap:intro}
+\input{chapter1}
+\input{chapter2}
+\input{chapter3}
+\input{chapter4}
+\input{chapter5}
+
+\newpage
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{Referencias}
+
+
+\end{document}

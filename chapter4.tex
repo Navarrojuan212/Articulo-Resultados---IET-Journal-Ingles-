@@ -1,0 +1,116 @@
+\section{Resultados} \label{chap:ch4}
+
+\begin{table*}[ht!]
+    \caption{{Datos estadísticos SNR (dB) de los diferentes niveles.}}
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccccccccc@{}}
+    \hline
+    \textbf{\textit{Lugar}} & \textbf{\textit{$Q_1$}} & \textbf{\textit{$\bar{x}$}} & \textbf{\textit{$Q_3$}} & \textbf{\textit{IQR}} & \textbf{\textit{\textcolor{red}{$\downarrow$} Atípico}} & \textbf{\textit{\textcolor{blue}{$\uparrow$} Atípico}} & \textbf{\textit{$\tilde{x}$}} & \textbf{\textit{$\hat{x}$}} & \textbf{\textit{$\sigma^2$}} & \textbf{\textit{$\sigma$}} \\ \hline
+        \rowcolor{blue!6} Piso 1 & 24.06 & 25.07 & 26.05 & 1.99 & 22.08 & 28.06 & 24.98 & 25.45 & 2.44 & 1.56 \\ 
+        Piso 2 & 19.7 & 20.34 & 21.0 & 1.3 & 18.38 & 22.29 & 20.28 & 20.17 & 0.86 & 0.93 \\ 
+        \rowcolor{blue!6} Piso 3 & 19.14 & 20.2 & 21.68 & 2.54 & 16.39 & 24.01 & 19.57 & 19.21 & 3.41 & 1.85 \\ 
+        Piso 4 & 21.03 & 21.93 & 22.63 & 1.6 & 19.52 & 24.33 & 21.92 & 21.15 & 2.35 & 1.53 \\ 
+        \rowcolor{blue!6} Piso 5 & 24.56 & 25.75 & 26.68 & 2.12 & 22.56 & 28.94 & 25.72 & 25.15 & 3.09 & 1.76 \\ 
+        Antena & 28.62 & 29.14 & 29.71 & 1.09 & 27.51 & 30.78 & 28.98 & 28.62 & 0.45 & 0.67 \\ 
+        \rowcolor{blue!6} RF-VLC & 36.02 & \textcolor{blue}{$\uparrow$}36.9 & 37.15 & 0.53 & 36.1 & 37.69 & 36.81 & 36.02 & 0.23 & 0.48 \\ 
+        Sótano 1 & 7.88 & 11.5 & 11.82 & 3.94 & 5.6 & 17.41 & 8.56 & 8.26 & 34.77 & 5.9 \\ 
+        \rowcolor{blue!6} Sótano 2 & 4.61 & \textcolor{red}{$\downarrow$}4.93 & 5.18 & 0.57 & 4.07 & 5.78 & 4.93 & 4.57 & 0.12 & 0.34 \\ 
+        \hline
+    \end{tabular*}
+    \label{tab:datos-estadisticos}
+\end{table*}
+
+Los datos recopilados se enfocaron principalmente en analizar la relación señal a ruido obtenida en distintos niveles y condiciones del Campus Universitario. Para garantizar la confiabilidad del análisis, se realizó previamente un escalado robusto, debido a la identificación inicial de valores atípicos; ya que al analizar el diagrama de violín ( Ver \Cref{Violinplot}), se observaron claramente valores atípicos significativos, especialmente en el Sótano 1. Este nivel presentó una dispersión notablemente mayor respecto a las otras ubicaciones evaluadas, indicando condiciones menos estables para la calidad del SNR.
+
+%%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%     
+    \begin{figure*}[b]
+    \centering
+    \centerline{\includegraphics[scale=0.4]{figures/Statistical Study/violin_plot.pdf}}
+    \caption{Diagrama de Violín de Distribuciones SNR de una misma señal de radio frecuencia en diferentes espacios Indoor, muestreados cada 0.1 segundos.}
+    \label{Violinplot}
+    \end{figure*}    
+%%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%
+ 
+Estas anomalías en la distribución fueron cuantificadas mediante la prueba de \textbf{Shapiro-Wilk} \cite{ShapiroWilk1965}, que confirmó que los datos recolectados no siguen una distribución normal (\textbf{estadístico}=0.928,  \textbf{p-valor}<0.00). Esta evidencia respalda la elección de análisis estadísticos no paramétricos para las comparaciones posteriores.
+Dado lo anterior, se aplicó la prueba \textbf{Kruskal-Wallis} \cite{Marusteri2010} para comparar los niveles de SNR entre los diferentes grupos evaluados. Los resultados mostraron una diferencia significativa (\textbf{estadístico}=1624.79, \textbf{p-valor}<0.00), indicando claramente que existen diferencias significativas en la calidad del SNR entre los diferentes niveles analizados.
+
+%%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
+\begin{figure*}[ht!]
+    \centering
+    \centerline{\includegraphics[scale=0.55]{figures/Statistical Study/scatterplot.pdf}}
+    \caption{Diagrama de Dispersión SNR.}
+    \label{Scatter}
+\end{figure*}
+%%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%     
+    \begin{figure*}[ht!]
+    \centering
+    \centerline{\includegraphics[scale=0.55]{figures/Statistical Study/histogram.pdf}}
+    \caption{Histograma SNR.}
+    \label{Histograma}
+    \end{figure*}    
+%%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
+
+En la \cref{tab:datos-estadisticos}, la cual es el resumen estadístico que complementa visualmente estos hallazgos, resaltando especialmente la alta calidad del SNR en el sistema propuesto RF-VLC (media=36.9 dB) en contraste con la baja calidad observada en el "Sótano 2" (media=4.93 dB).
+Finalmente, a pesar de la identificación clara de valores atípicos y la ausencia de una distribución normal, estos resultados respaldan positivamente la robustez y eficacia del sistema propuesto. Particularmente, se evidencia que bajo condiciones óptimas como la de "RF-VLC, el sistema supera considerablemente otros escenarios menos favorables, reafirmando el potencial para implementaciones prácticas. 
+
+En la Figura \ref{Scatter}, las mediciones de dispersión evidencian en los sótanos, una clara tendencia descendente; indicando una degradación significativa de la señal en comparación con los otros niveles. Mientras que los pisos superiores presentan valores de SNR más estables, dado que los sótanos sufren mayores interferencias y absorción de señales, reflejando peores condiciones de transmisión. Una visión más gráfica se puede evidenciar en el histograma de la Figura \ref{Histograma}. Los peores valores de SNR se observan en los sótanos 1 y 2, indicando una mayor degradación de la señal en entornos subterráneos. En contraste, la terraza muestra los mejores valores de SNR, reflejando mejores condiciones de transmisión en comparación con los niveles inferiores.
+
+% %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
+% \begin{figure*}[ht!]
+%     \centering
+%     \centerline{\includegraphics[scale=0.5]{figures/Statistical Study/scatterplot.pdf}}
+%     \caption{Diagrama de Dispersión SNR.}
+%     \label{Scatter}
+% \end{figure*}
+% %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%     
+%     \begin{figure*}[ht!]
+%     \centering
+%     \centerline{\includegraphics[scale=0.5]{figures/Statistical Study/histogram.pdf}}
+%     \caption{Histograma SNR.}
+%     \label{Histograma}
+%     \end{figure*}    
+% %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\clearpage
+\subsection*{\textbf{Casos de Uso}} 
+Ideas de innovación tecnológica.
+
+%%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
+    \begin{figure*}[b]
+    \centerline{\includegraphics[scale=0.7]{figures/Casos de uso/ComuncacionSubacuatica.png}}
+    % \caption{Comunicación Subacuática.}
+        \caption{\textbf{Boya Inteligente RF-VLC para Estudios Marinos,} para facilitar investigaciones oceánicas sostenibles. Su antena RF permitiría comunicación constante con centros de investigación, mientras que el sistema VLC subacuático brindaría transferencia de datos rápida y segura a submarinos y vehículos no tripulados, impulsando estudios detallados sobre biodiversidad marina y cambios climáticos.}
+    \vspace{0.5cm}
+    \label{Comunicación Subacuática}
+    \end{figure*}     
+    
+%%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%
+ 
+\clearpage
+% \subsection{Guiado Lumínico para Personas con Discapacidad Visual en Estaciones de Trenes} 
+% Mediante señales lumínicas ubicadas estratégicamente en las estaciones de trenes, los usuarios en condiciones especiales de visión, equipados con dispositivos personales podrían orientarse, recibir información en tiempo real sobre rutas, plataformas y advertencias. Logrando así aumentar su autonomía e inclusión en espacios de transporte públicos. (Ver \Cref{Geolocalización para personas con discapacidad visual en estaciones de trenes})
+
+%%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%
+    \begin{figure*}[ht!]
+    \centerline{\includegraphics[scale=0.8]{figures/Casos de uso/GeolocalizacionEnTrenesParaInvidente.jpg}}
+    % \caption{Geolocalización para personas con discapacidad visual en estaciones de trenes}
+    \caption{\textbf{Guiado Lumínico para Personas con Discapacidad Visual en Estaciones de Trenes,} mediante señales lumínicas ubicadas estratégicamente en las estaciones de trenes, los usuarios en condiciones especiales de visión, equipados con dispositivos personales podrían orientarse, recibir información en tiempo real sobre rutas, plataformas y advertencias. Logrando así aumentar su autonomía e inclusión en espacios de transporte públicos, (Ver \Cref{Geolocalización para personas con discapacidad visual en estaciones de trenes}).}
+    \label{Geolocalización para personas con discapacidad visual en estaciones de trenes}
+    \end{figure*}
+% %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
+
+\clearpage
+
+%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{figure*}[htbp]
+    \centerline{\includegraphics[scale=0.65]{figures/Casos de uso/MineriaSostenible.jpg}}
+    % \caption{Minería Sostenible.}
+    \caption{\textbf{Minería Sostenible,} en ambientes donde la seguridad y sostenibilidad son prioritarias, la combinación de RF y VLC asegura comunicaciones confiables y eficientes. Mineros equipados con cascos inteligentes pueden recibir información crítica a través de luces integradas en la infraestructura minera, mejorando la seguridad laboral, reduciendo accidentes y fomentando una operación minera sostenible y consciente del entorno. (Ver \Cref{Minería Sostenible}).}
+    \label{Minería Sostenible}
+    \end{figure*}
+%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%%%%%%%%%%%%
+
