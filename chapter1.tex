@@ -1,6 +1,9 @@
 \section{Introduction} \label{chap:intro}
 
 The deployment of telecommunications networks is increasing at an accelerated pace as communities and territories rapidly grow in population and infrastructure. Currently, there is an exponential increase in traffic on telecommunications networks due to the emergence of services such as teleconferencing, high-definition video streaming, interactive video games, among others. Such services demand a considerable portion of the available bandwidth of communication channels. The need to transmit information has risen to such a point that the various telecommunications network and service providers (PRST) must anticipate growth and readjust to constant changes, complying with the relevant technical specifications and following the regulations established by regulatory bodies such as the Ministry of Information Technology and Communications (MINTIC), the Communications Regulatory Commission (CRC), the National Spectrum Agency (ANE), and other regulatory bodies \cite{MINTIC,CRC,ANE} [1]–[3].
+
+\smallskip
+
 In terms of communication, one of the channels that has the most drawbacks in terms of bandwidth management and use is the wireless channel. In theory, the electromagnetic spectrum is infinite \cite{Heter1985} [4], but only a certain portion of the radio spectrum (see \Cref{tablaA}) is used to transmit information, limiting its use to a few tens of GHz. On the other hand, some of the radio spectrum bands, even if they are not currently in use, must remain free and available for special uses \cite{Hattab2019} [5]. In this sense, to provide commercial communications services, the radio spectrum is further restricted.
 
 \smallskip
@@ -34,21 +37,32 @@ In terms of communication, one of the channels that has the most drawbacks in te
     \end{center}
     \end{table}
 
-In addition to the above, the bandwidth of the wireless channel is more limited compared to fiber optics \cite{Sharma2014} [6] and conductor cables due to various physical phenomena such as: The presence of cosmic noise \cite{Bala2002,Lanzerotti2005,Nita2002} [7]–[9], atmospheric noise \cite{Reuveni2010,Witvliet2023} [10], [11], atmospheric absorption \cite{Bean1957} [12], multipath interference \cite{Lucas2017} [13], partial reflection of electromagnetic waves in matter, and diffraction \cite{Rossi2000, Blaunstein2003} [14], [15]. These phenomena force communications systems to pre-process signals so that bandwidth is efficient and maintains the possibility of sustaining the desired speeds in an inhospitable scenario so that the receiver acquires a signal-to-noise ratio (SNR) adjusted to current regulations. However, meeting quality standards in a wireless communication system, especially inside any building, is extremely complex in cities because there is a lot of electromagnetic wave shadowing, as there are many buildings of different heights that block others, making it difficult for receivers indoors to have an equitable SNR among different users. This technology addresses challenges in terms of power distribution and SNR, as the wireless signal is affected by different media with which it interacts on its journey from the source of emission to the different signal reception areas. At this point, the conditions for signals in horizontal properties, which are the subject of our study, are directly affected to such an extent that there are places with no coverage due to total signal loss.
+In addition to the above, the bandwidth of the wireless channel is more limited compared to fiber optics \cite{Sharma2014} [6] and conductor cables due to various physical phenomena such as: The presence of cosmic noise \cite{Bala2002,Lanzerotti2005,Nita2002} [7]–[9], atmospheric noise \cite{Reuveni2010,Witvliet2023} [10], [11], atmospheric absorption \cite{Bean1957} [12], multipath interference \cite{Lucas2017} [13], partial reflection of electromagnetic waves in matter, and diffraction \cite{Rossi2000, Blaunstein2003} [14], [15]. 
 
-\smallskip
+\smallskip 
 
-Although there are significant and diverse challenges in terms of communication, as mentioned above regarding RF systems, this is not the only path that can be taken in search of a recursive solution. there is also another form of information transmission that can be exploited for indoor environments, such as visible light communication, which is a technology that works very well indoors \cite{Mohsan2023} [16] and has great potential to contribute to solving the problems identified. These systems use light-emitting diodes (LEDs) as transmitters and different types of photodetectors such as solar panels and photodiodes, among others, as receivers. Research on VLC \cite{Almadani2020,Liu2023,Memedi2021,Singh2020} [17]–[20] shows the different applications, and also mentions the advantages of low energy consumption \cite{Khan2017,Matheus2019,Pathak2015} [21]–[23] and the use of free spectrum bands, since these systems operate in the visible range (see \Cref{EspectroVisible}, taken from \cite{DynamoElectronics} [24]). These technical conditions allow us to transmit information at higher speeds and with greater bandwidth  \cite{Kabir2022} [25] compared to radio frequencies. At this point, we observe the need for technological convergence that allows the coexistence of broadcasting systems and this short-range optical communication system, as it has great advantages for implementation in the country.
+These phenomena force communications systems to pre-process signals so that bandwidth is efficient and maintains the possibility of sustaining the desired speeds in an inhospitable scenario so that the receiver acquires a signal-to-noise ratio (SNR) adjusted to current regulations. However, meeting quality standards in a wireless communication system, especially inside any building, is extremely complex in cities because there is a lot of electromagnetic wave shadowing, as there are many buildings of different heights that block others, making it difficult for receivers indoors to have an equitable SNR among different users. This technology addresses challenges in terms of power distribution and SNR, as the wireless signal is affected by different media with which it interacts on its journey from the source of emission to the different signal reception areas. At this point, the conditions for signals in horizontal properties, which are the subject of our study, are directly affected to such an extent that there are places with no coverage due to total signal loss.
 
-\smallskip
-
+% \smallskip
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%
 \begin{figure}[ht!]
-\centerline{\includegraphics[scale=0.36]{figures/VLC-Spectrum.png}}
-\caption{Espectro visible.}
+\centerline{\includegraphics[scale=0.36]{figures/figure1.png}}
+\caption{VLC Spectrum.}
 \label{EspectroVisible}
 \end{figure} 
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
+
+Although there are significant and diverse challenges in terms of communication, as mentioned above regarding RF systems, this is not the only path that can be taken in search of a recursive solution. there is also another form of information transmission that can be exploited for indoor environments, such as visible light communication (VLC), which is a technology that works very well indoors \cite{Mohsan2023} [16] and has great potential to contribute to solving the problems identified. These systems use light-emitting diodes (LEDs) as transmitters and different types of photodetectors such as solar panels and photodiodes, among others, as receivers. Research on VLC \cite{Almadani2020,Liu2023,Memedi2021,Singh2020} [17]–[20] shows the different applications, and also mentions the advantages of low energy consumption \cite{Khan2017,Matheus2019,Pathak2015} [21]–[23] and the use of free spectrum bands, since these systems operate in the visible range (see \Cref{EspectroVisible}, taken from \cite{DynamoElectronics} [24]). These technical conditions allow us to transmit information at higher speeds and with greater bandwidth  \cite{Kabir2022} [25] compared to radio frequencies. At this point, we observe the need for technological convergence that allows the coexistence of broadcasting systems and this short-range optical communication system, as it has great advantages for implementation in the country.
+
+\smallskip
+
+% %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%
+% \begin{figure}[ht!]
+% \centerline{\includegraphics[scale=0.36]{figures/VLC-Spectrum.png}}
+% \caption{Espectro visible.}
+% \label{EspectroVisible}
+% \end{figure} 
+% %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
 
 In Colombia, regulations are enforced through the Technical Regulation on Internal Networks (RITEL) \cite{RITEL} [26], which aims to improve and expand the coverage of telecommunications services in Colombia. It should be noted that this regulation only applies to properties that are subject to a co-ownership or horizontal property regime. Although the main objective of RITEL is to guarantee users' freedom of choice in terms of PRST options and provision of services for digital development. It also sets out the minimum conditions for support infrastructures and the access network for Digital Terrestrial Television (DTT) services. In this context, the development and application of a hybrid system in indoor environments is proposed, as it would exponentially increase the possibility of working hand in hand with IoT devices, and our systems would be able to support new technologies that require higher bandwidths.
 

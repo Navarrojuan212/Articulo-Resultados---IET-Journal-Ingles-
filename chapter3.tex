@@ -2,34 +2,67 @@
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%     
     \begin{figure*}[ht!]
     \centering
-    \centerline{\includegraphics[scale=0.52]{figures/RF-VLC/RFSignal-diagrama.pdf}}
+    \centerline{\includegraphics[scale=0.52]{figures/RF-VLC/figure9.pdf}}
     \caption{Señal RF tomada desde el exterior y conectada al sistema VLC.}
     \label{Antenayagi}
     \end{figure*}    
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%
 
 En este capítulo se describe, de manera detallada, la metodología seguida para lograr la convergencia entre un enlace de radiodifusión y un sistema de comunicación por luz visible. El proceso inicia con la captura de la señal comercial de FM situada en los 103.5 MHz en la ciudad de Medellin a través de una antena Yagi instalada en la terraza del cuarto piso del campus universitario ITM Fraternidad (ver esquema de la \Cref{Antenayagi}). Esta señal se conectó directamente a una USRP, que en conjunto con GNU Radio, permitió su procesamiento y posterior retransmisión a una frecuencia de 140 MHz. 
-% %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%     
-%     \begin{figure}[ht!]
+% % %%%%%%%%%%%%% Imagenes junstas super chingonas I %%%%%%%%%%%%%%%
+% \begin{figure*}[b]
 %     \centering
-%     \centerline{\includegraphics[scale=0.5]{figures/RF-VLC/RFSignal-diagrama.pdf}}
-%     \caption{Señal RF tomada desde el exterior y conectada al sistema VLC.}
-%     \label{Antenayagi}
-%     \end{figure}    
-% %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%
+%     % Primera fila
+%     \begin{subfigure}{0.45\textwidth}
+%         \centering
+%         \includegraphics[scale=0.6]{figures/RF-VLC/figure10a.jpg}
+%         \caption{Señal a la salida de la USRP, filtrada y retransmitida a 140 MHz.}
+%         %\caption{Señal In Amplificador Tx 140MHz.}
+%         \label{fig:Senal-In-Amplificador-Tx-140MHz}
+%     \end{subfigure}
+%     \hfill
+%         \begin{subfigure}{0.45\textwidth}
+%         \centering
+%         \includegraphics[scale=0.6]{figures/RF-VLC/figure10b.jpg}
+%         \caption{Señal después del amplificador LNA, utilizada para amplificar la señal recibida.}
+%         %\caption{Señal Out Amplificador Tx 140MHz.}
+%         \label{fig:Senal-Out-Amplificador-Tx-140MHz}
+%     \end{subfigure}
+    
+%     % Segunda fila
+%     \vspace{0.5cm}
+%     \begin{subfigure}{0.45\textwidth}
+%         \centering
+%         \includegraphics[scale=0.6]{figures/RF-VLC/figure10c.jpg}
+%         \caption{Señal a la salida del mezclador, la cual corresponde a la señal de entrada al Bias-T.}
+%         %\caption{Señal Out Mixer Tx 2MHz.}
+%         \label{fig:Senal-Out-Mixer-Tx-2MHz}
+%     \end{subfigure}
+%     \hfill
+%     \begin{subfigure}{0.45\textwidth}
+%         \centering
+%         \includegraphics[scale=0.6]{figures/RF-VLC/figure10d.jpg}
+%         \caption{Señal a la salida del Bias-T, que es la misma señal de entrada al LED.}
+%         \label{fig:Senal-Out-BiasT-Tx-2MHz}
+%     \end{subfigure}
+%     \vspace{0.5cm}
+%     \caption{\textbf{Señales en Distintas Etapas del Transmisor Híbrido,} donde se observa claramente cómo los niveles de potencia de la señal varían a medida que atraviesan las diferentes etapas del transmisor híbrido. Se inicia con una potencia de aproximadamente -52.5 dBm a la salida de la USRP, pasando por los procesos de amplificación y conversión de frecuencia, hasta alcanzar un nivel de -17.1 dBm después del Bias-T, correspondiente a la frecuencia intermedia.
+%         }
+%     \label{fig:ConjuntoSenales}
+% \end{figure*}
+
 \subsection{Integración de Radiodifusión y Comunicación por Luz Visible}
 
-
 En cada etapa del circuito, se realizaron mediciones por medio de un analizador de espectro portátil de referencia {TinySA}\cite{}, para verificar el desempeño del sistema. Como se muestra en la \Cref{fig:Senal-In-Amplificador-Tx-140MHz}, a la salida de la USRP se registró una señal de -52.5 dBm sin componente DC. Tras pasar por el amplificador de bajo ruido, esta señal incrementó hasta -11 dBm, lo cual se observa claramente en la \Cref{fig:Senal-Out-Amplificador-Tx-140MHz}.
-\vspace{0.5cm} 
+% \vspace{0.5cm} 
 
 % %%%%%%%%%%%%% Imagenes junstas super chingonas I %%%%%%%%%%%%%%%
-\begin{figure*}[htbp]
+\begin{figure*}[ht!]
     \centering
     % Primera fila
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[scale=0.6]{figures/RF-VLC/Senal In Amplificador Tx 140MHz.jpg}
+        \includegraphics[scale=0.6]{figures/RF-VLC/figure10a.jpg}
         \caption{Señal a la salida de la USRP, filtrada y retransmitida a 140 MHz.}
         %\caption{Señal In Amplificador Tx 140MHz.}
         \label{fig:Senal-In-Amplificador-Tx-140MHz}
@@ -37,7 +70,7 @@ En cada etapa del circuito, se realizaron mediciones por medio de un analizador 
     \hfill
         \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[scale=0.6]{figures/RF-VLC/Senal Out Amplificador Tx 140MHz.jpg}
+        \includegraphics[scale=0.6]{figures/RF-VLC/figure10b.jpg}
         \caption{Señal después del amplificador LNA, utilizada para amplificar la señal recibida.}
         %\caption{Señal Out Amplificador Tx 140MHz.}
         \label{fig:Senal-Out-Amplificador-Tx-140MHz}
@@ -47,7 +80,7 @@ En cada etapa del circuito, se realizaron mediciones por medio de un analizador 
     \vspace{0.5cm}
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[scale=0.6]{figures/RF-VLC/Senal Out Mixer Tx 2MHz.jpg}
+        \includegraphics[scale=0.6]{figures/RF-VLC/figure10c.jpg}
         \caption{Señal a la salida del mezclador, la cual corresponde a la señal de entrada al Bias-T.}
         %\caption{Señal Out Mixer Tx 2MHz.}
         \label{fig:Senal-Out-Mixer-Tx-2MHz}
@@ -55,7 +88,7 @@ En cada etapa del circuito, se realizaron mediciones por medio de un analizador 
     \hfill
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[scale=0.6]{figures/RF-VLC/Senal Out BiasT Tx 2MHz.jpg}
+        \includegraphics[scale=0.6]{figures/RF-VLC/figure10d.jpg}
         \caption{Señal a la salida del Bias-T, que es la misma señal de entrada al LED.}
         \label{fig:Senal-Out-BiasT-Tx-2MHz}
     \end{subfigure}
@@ -68,18 +101,18 @@ En cada etapa del circuito, se realizaron mediciones por medio de un analizador 
 Simultáneamente, mediante una segunda USRP, se generó una señal de \textbf{142 MHz} como frecuencia para \textbf{Oscilador Local}, la cual combinada con la señal de 140 MHz; por medio del mezclador AD831, consecuentemente se obtuvieron dos componentes en frecuencia: 2 MHz (diferencia) y 282 MHz (suma). Se eligió la componente de 2 MHz (ver \Cref{fig:Senal-Out-Mixer-Tx-2MHz}) por adecuarse al ancho de banda típico de un LED convencional y simplificar la modulación óptica. Esta señal, denominada frecuencia intermedia (FI), presentó una potencia de -16.1 dBm, lo que indica una atenuación aproximada de 5 dB respecto a la etapa anterior. Finalmente, acontinuación, la señal fue enviada a un circuito Bias-T, encargado de proporcionar un nivel DC para excitar la fuente luminosa sin interferir la información. A la salida del Bias-T, la potencia medida fue de -17.1 dBm (ver \Cref{fig:Senal-Out-BiasT-Tx-2MHz}), conectándose posteriormente a un LED azul con fósforo amarillo de 3W (obtenido de una linterna LED comercial), modulando así su intensidad luminosa conforme a la señal eléctrica recibida.
 
 %%%%%%%%%%%%%%% Imagenes junstas super chingonas II %%%%%%%%%%%%%%%%%
-\begin{figure*}[htbp]
+\begin{figure*}[ht!]
     \centering
         \begin{subfigure}{0.45\textwidth}
             \centering
-            \includegraphics[scale=0.6]{figures/RF-VLC/Senal Rcibida Sin Lente 140MHz.jpg}
+            \includegraphics[scale=0.6]{figures/RF-VLC/figure11a.jpg}
             \caption{Señal recibida en la etapa final de recepción sin usar lente de Fresnel.}
             \label{fig:Senal-Rcibida-Sin-Lente-140MHz}
         \end{subfigure}
     \hfill
         \begin{subfigure}{0.45\textwidth}
             \centering
-            \includegraphics[scale=0.6]{figures/RF-VLC/Senal In Amplificador Rx 2MHz.jpg}
+            \includegraphics[scale=0.6]{figures/RF-VLC/figure11b.jpg}
             \caption{Señal medida a la salida del Bias T, ya sin componente DC usando lente de Fresnel.}
             \label{fig:Senal-In-Amplificador-Rx-2MHz}
         \end{subfigure}
@@ -88,14 +121,14 @@ Simultáneamente, mediante una segunda USRP, se generó una señal de \textbf{14
     \vspace{0.2cm}
         \begin{subfigure}{0.45\textwidth}
             \centering
-            \includegraphics[scale=0.6]{figures/RF-VLC/Senal Out Amplificador Rx 2MHz.jpg}
+            \includegraphics[scale=0.6]{figures/RF-VLC/figure11c.jpg}
             \caption{Señal a la salida del amplificador  de bajo ruido, usando lente de Fresnel.}
             \label{fig:Senal-Out-Amplificador-Rx-2MHz}
         \end{subfigure}
     \hfill
         \begin{subfigure}{0.45\textwidth}
             \centering
-            \includegraphics[scale=0.6]{figures/RF-VLC/Senal Rcibida Lente 140MHz.jpg}
+            \includegraphics[scale=0.6]{figures/RF-VLC/figure11d.jpg}
             \caption{Señal a la entrada del Doungle RTL2832U, usando lente de Fresnel.}
             \label{fig:Senal-Rcibida-Lente-140MHz}
         \end{subfigure}
@@ -106,7 +139,7 @@ Simultáneamente, mediante una segunda USRP, se generó una señal de \textbf{14
 
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
     \begin{figure*}[ht!]
-    \centerline{\includegraphics[scale=0.45]{figures/ITM_.png}}
+    \centerline{\includegraphics[scale=0.45]{figures/figure12.png}}
     \caption{Institución Universitaria ITM, Campus Fraternidad.}
     \label{Campus Fraternidad}
     \end{figure*}
@@ -121,4 +154,4 @@ Continuando con el esquema propuesto, se efectuó el cambio de frecuencia utiliz
 
 Con el objetivo de analizar cómo varía la relación señal-ruido (SNR) bajo distintas condiciones urbanas, se realizó un estudio utilizando la misma señal comercial previamente caracterizada en los experimentos anteriores, específicamente en 103.5 MHz, dentro del contexto urbano de Medellín. El análisis se llevó a cabo empleando un dispositivo USRP complementado con el software AIRSPY. Se escogieron ubicaciones estratégicas del campus Fraternidad de la Institución Universitaria ITM (como se aprecia en la \Cref{Campus Fraternidad}) para efectuar las mediciones, abarcando desde los sótanos (niveles -1 y -2) hasta la terraza en el sexto piso, incluyendo los pisos intermedios, lo que permitió evaluar comparativamente las condiciones de propagación de la señal.
 
-        
+\clearpage       
