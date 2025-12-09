@@ -1,14 +1,15 @@
 \section{Metodología} \label{chap:ch3}
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%     
-    \begin{figure*}[ht!]
-    \centering
-    \centerline{\includegraphics[scale=0.52]{figures/RF-VLC/figure9.pdf}}
-    \caption{Señal RF tomada desde el exterior y conectada al sistema VLC.}
-    \label{Antenayagi}
-    \end{figure*}    
+\begin{figure*}[ht!]
+  \centering
+  \centerline{\includegraphics[scale=0.45]{figures/RF-VLC/figure9.pdf}}
+  \caption{Señal RF tomada desde el exterior y conectada al sistema VLC.}
+  \label{Antenayagi}
+\end{figure*}    
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%
+This chapter describes in detail the methodology used to achieve convergence between a radio broadcast link and a visible light communication system. The process begins with the capture of the commercial FM signal located at 103.5 MHz in the city of Medellin through a Yagi antenna installed on the fourth floor terrace of the ITM Fraternidad university campus (see diagram in \Cref{Antenayagi}). This signal was connected directly to a USRP, which, together with GNU Radio, allowed it to be processed and subsequently retransmitted at a frequency of 140 MHz.
 
-En este capítulo se describe, de manera detallada, la metodología seguida para lograr la convergencia entre un enlace de radiodifusión y un sistema de comunicación por luz visible. El proceso inicia con la captura de la señal comercial de FM situada en los 103.5 MHz en la ciudad de Medellin a través de una antena Yagi instalada en la terraza del cuarto piso del campus universitario ITM Fraternidad (ver esquema de la \Cref{Antenayagi}). Esta señal se conectó directamente a una USRP, que en conjunto con GNU Radio, permitió su procesamiento y posterior retransmisión a una frecuencia de 140 MHz. 
+% \textcolor{blue}{En este capítulo se describe, de manera detallada, la metodología seguida para lograr la convergencia entre un enlace de radiodifusión y un sistema de comunicación por luz visible. El proceso inicia con la captura de la señal comercial de FM situada en los 103.5 MHz en la ciudad de Medellin a través de una antena Yagi instalada en la terraza del cuarto piso del campus universitario ITM Fraternidad (ver esquema de la \Cref{Antenayagi}). Esta señal se conectó directamente a una USRP, que en conjunto con GNU Radio, permitió su procesamiento y posterior retransmisión a una frecuencia de 140 MHz.} 
 % % %%%%%%%%%%%%% Imagenes junstas super chingonas I %%%%%%%%%%%%%%%
 % \begin{figure*}[b]
 %     \centering
@@ -51,9 +52,12 @@ En este capítulo se describe, de manera detallada, la metodología seguida para
 %     \label{fig:ConjuntoSenales}
 % \end{figure*}
 
-\subsection{Integración de Radiodifusión y Comunicación por Luz Visible}
+% \subsection{Integración de Radiodifusión y Comunicación por Luz Visible}
+\subsection{Integration of Broadcasting and Visible Light Communication}
 
-En cada etapa del circuito, se realizaron mediciones por medio de un analizador de espectro portátil de referencia {TinySA}\cite{}, para verificar el desempeño del sistema. Como se muestra en la \Cref{fig:Senal-In-Amplificador-Tx-140MHz}, a la salida de la USRP se registró una señal de -52.5 dBm sin componente DC. Tras pasar por el amplificador de bajo ruido, esta señal incrementó hasta -11 dBm, lo cual se observa claramente en la \Cref{fig:Senal-Out-Amplificador-Tx-140MHz}.
+At each stage of the circuit, measurements were taken using a TinySA portable reference spectrum analyzer to verify the performance of the system. As shown in \Cref{fig:Senal-In-Amplificador-Tx-140MHz}, a signal of -52.5 dBm without a DC component was recorded at the USRP output. After passing through the low-noise amplifier, this signal increased to -11 dBm, which can be clearly seen in \Cref{fig:Senal-Out-Amplificador-Tx-140MHz}.
+
+\textcolor{blue}{En cada etapa del circuito, se realizaron mediciones por medio de un analizador de espectro portátil de referencia {TinySA}\cite{}, para verificar el desempeño del sistema. Como se muestra en la \Cref{fig:Senal-In-Amplificador-Tx-140MHz}, a la salida de la USRP se registró una señal de -52.5 dBm sin componente DC. Tras pasar por el amplificador de bajo ruido, esta señal incrementó hasta -11 dBm, lo cual se observa claramente en la \Cref{fig:Senal-Out-Amplificador-Tx-140MHz}.}
 % \vspace{0.5cm} 
 
 % %%%%%%%%%%%%% Imagenes junstas super chingonas I %%%%%%%%%%%%%%%
@@ -97,8 +101,9 @@ En cada etapa del circuito, se realizaron mediciones por medio de un analizador 
         }
     \label{fig:ConjuntoSenales}
 \end{figure*}
+Simultaneously, using a second USRP, a 142 MHz signal was generated as the Local Oscillator frequency, which was combined with the 140 MHz signal using the AD831 mixer, resulting in two frequency components: 2 MHz (difference) and 282 MHz (sum). The 2 MHz component was chosen (see \Cref{fig:Senal-Out-Mixer-Tx-2MHz})
 
-Simultáneamente, mediante una segunda USRP, se generó una señal de \textbf{142 MHz} como frecuencia para \textbf{Oscilador Local}, la cual combinada con la señal de 140 MHz; por medio del mezclador AD831, consecuentemente se obtuvieron dos componentes en frecuencia: 2 MHz (diferencia) y 282 MHz (suma). Se eligió la componente de 2 MHz (ver \Cref{fig:Senal-Out-Mixer-Tx-2MHz}) por adecuarse al ancho de banda típico de un LED convencional y simplificar la modulación óptica. Esta señal, denominada frecuencia intermedia (FI), presentó una potencia de -16.1 dBm, lo que indica una atenuación aproximada de 5 dB respecto a la etapa anterior. Finalmente, acontinuación, la señal fue enviada a un circuito Bias-T, encargado de proporcionar un nivel DC para excitar la fuente luminosa sin interferir la información. A la salida del Bias-T, la potencia medida fue de -17.1 dBm (ver \Cref{fig:Senal-Out-BiasT-Tx-2MHz}), conectándose posteriormente a un LED azul con fósforo amarillo de 3W (obtenido de una linterna LED comercial), modulando así su intensidad luminosa conforme a la señal eléctrica recibida.
+\textcolor{blue}{Simultáneamente, mediante una segunda USRP, se generó una señal de \textbf{142 MHz} como frecuencia para \textbf{Oscilador Local}, la cual combinada con la señal de 140 MHz; por medio del mezclador AD831, consecuentemente se obtuvieron dos componentes en frecuencia: 2 MHz (diferencia) y 282 MHz (suma). Se eligió la componente de 2 MHz (ver \Cref{fig:Senal-Out-Mixer-Tx-2MHz}) por adecuarse al ancho de banda típico de un LED convencional y simplificar la modulación óptica. Esta señal, denominada frecuencia intermedia (FI), presentó una potencia de -16.1 dBm, lo que indica una atenuación aproximada de 5 dB respecto a la etapa anterior. Finalmente, acontinuación, la señal fue enviada a un circuito Bias-T, encargado de proporcionar un nivel DC para excitar la fuente luminosa sin interferir la información. A la salida del Bias-T, la potencia medida fue de -17.1 dBm (ver \Cref{fig:Senal-Out-BiasT-Tx-2MHz}), conectándose posteriormente a un LED azul con fósforo amarillo de 3W (obtenido de una linterna LED comercial), modulando así su intensidad luminosa conforme a la señal eléctrica recibida.}
 
 %%%%%%%%%%%%%%% Imagenes junstas super chingonas II %%%%%%%%%%%%%%%%%
 \begin{figure*}[ht!]
@@ -135,7 +140,6 @@ Simultáneamente, mediante una segunda USRP, se generó una señal de \textbf{14
     \caption{\textbf{Señales en el Receptor  por etapas.} Aquí se pueden observar dos casos claramente diferenciados considerando una distancia fija entre el transmisor y receptor de 134 cm. La primera imagen corresponde a la señal medida al final de la etapa de recepción sin utilizar lente de Fresnel. Las siguientes tres imágenes presentan las mediciones realizadas en diferentes etapas internas del receptor híbrido propuesto, incluyendo nuevamente la señal al final del circuito receptor, pero ahora utilizando una lente de Fresnel colocada a una distancia de 13 cm del fotodetector. Cabe destacar que la distancia total del enlace óptico se mantuvo constante en ambos casos.}
     \label{fig:ConjuntoSenales}
 \end{figure*}
-%%%%%%%%% Imagenes junstas super chingonas II %%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
     \begin{figure*}[ht!]

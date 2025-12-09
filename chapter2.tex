@@ -5,8 +5,6 @@ The demand for wireless communications in indoor environments has increased sign
 
 % \smallskip 
 
-% \textcolor{blue}{La demanda de comunicaciones inalámbricas en entornos interiores ha aumentado significativamente debido al crecimiento de dispositivos conectados y la necesidad de altas tasas de transferencia de datos \cite{Mitra2019,Chowdhury2019}. Sin embargo, los servicios de radiodifusión y comunicación móvil enfrentan múltiples limitaciones en estos escenarios, como interferencias, atenuación de la señal y saturación del espectro radioeléctrico, lo que resulta en un mal funcionamiento de los sistemas existentes \cite{Lee2007,Tan2016}. En la \Cref{RF} se puede observar una representación gráfica de un escenario real de radiodifusión de múltiples señales en un ambiente urbano.} 
-
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%
 \begin{figure*}[ht!]
 % \begin{figure}[htbp]
@@ -18,24 +16,15 @@ The demand for wireless communications in indoor environments has increased sign
 
 These problems are evident in emerging technologies such as 5G and future 6G, and even in digital terrestrial television (DTT), the internet, and satellite television, or any communication service that involves a link from the outside to the inside, where the high frequencies used are susceptible to loss and require a line of sight free of obstacles \cite{Chaves2016,Ribadeneira-Ramírez,Guidotti2019} [31]–[33].
 
-% \textcolor{blue}{Estos problemas son evidentes en tecnologías emergentes como 5G, y las futuras 6G, e incluso en la televisión digital terrestre (TDT), internet y televisión satelital, o todo aquel servicio de comunicación que implique un enlace desde el exterior hasta el interior, donde las altas frecuencias utilizadas son susceptibles a pérdidas y requieren una línea de vista libre de obstáculos \cite{Chaves2016,Ribadeneira-Ramírez,Guidotti2019}. }
-
 The migration from analog to digital systems and the use of white space spectrum have attempted to mitigate some of these problems, but significant challenges remain in spectral efficiency and spectrum management \cite{Wu2017,Zhang2017} [34], [35]. Given these limitations, it is necessary to explore alternatives that complement traditional radio frequency (RF) technologies and ensure reception and transmission quality inside any building, that is, maintaining the same level of communication quality whether in a home or in more inhospitable settings such as parking lots, shielded environments, tunnels, or underground mines.
-    
-% \textcolor{blue}{La migración de sistemas analógicos a digitales y la utilización del espectro de espacios en blanco han intentado mitigar algunos de estos problemas, pero aún persisten desafíos significativos en la eficiencia espectral y la gestión del espectro \cite{Wu2017,Zhang2017}. Ante estas limitaciones, es necesario explorar alternativas que complementen a las tecnologías de radiofrecuencia (RF) tradicionales y que aseguren la calidad de la recepción y transmisión en el interior de cualquier edificación, es decir, mantener el mismo nivel de calidad de comunicación bien sea en una casa o en escenarios más inhóspitos como parqueaderos, entornos blindados, túneles o minas subterráneas. }
 
 VLC is a wireless communication technology that has been dominating scenarios such as indoor communication and could support RF systems \cite{Xu2016,Hao2013} [36], [37]. VLC uses the visible light band of the electromagnetic spectrum to transmit information, taking advantage of existing LED lighting infrastructure and offering benefits such as increased bandwidth, immunity to other radio signals, electromagnetic interference, and improved security \cite{Karunatilaka2015,RAHAIM2015T} [38], [39].
-    
-% \textcolor{blue}{VLC es una tecnología de comunicación inalámbrica que ha venido dominando escenarios como la comunicación en interiores y podría apoyar a los sistemas RF \cite{Xu2016,Hao2013}. VLC utiliza la banda de luz visible del espectro electromagnético para transmitir información, aprovechando la infraestructura de iluminación LED existente y ofreciendo beneficios como mayor ancho de banda, inmunidad a otras señales de radio, la interferencia electromagnética y seguridad mejorada \cite{Karunatilaka2015,RAHAIM2015T}. }
+
 \smallskip 
 
 However, VLC also has its own limitations, such as dependence on line of sight, interference with other light sources, and limited coverage \cite{Rahaim2015,Hosney2020} [40], [41]. Even so, VLC could be a technology that would allow the distribution of outdoor radio signals indoors, ensuring a more uniform signal-to-noise ratio in every corner of any building, especially in urban environments. To achieve this goal, an in-depth analysis of the architecture of RF and VLC communication systems is required to enable hybridization without interfering with the standards that currently govern these technologies.
 
-% \textcolor{blue}{No obstante, VLC también presenta sus propias limitaciones, como la dependencia de la línea de vista, interferencias con otras fuentes lumínicas y cobertura limitada \cite{Rahaim2015,Hosney2020}. Aun así, VLC puede ser una tecnología que permitiría la distribución de las señales de radio exteriores hasta el interior, asegurando una relación señal a ruido más uniforme en cada rincón de cualquier construcción, sobre todo en entornos urbanos. Para lograr tal objetivo se requiere un análisis profundo de la arquitectura de los sistemas de comunicación RF y VLC para dar lugar a la hibridación sin llegar a intervenir los estándares que actualmente rigen dichas tecnologías. }
-
 This chapter analyzes the current limitations of RF and VLC technologies in indoor environments, with the aim of identifying opportunities to improve wireless communication in these spaces. \Cref{seccionRFLimitaciones} addresses the tech-RF technologies and their limitations, covering issues such as spectrum saturation, interference, and specific challenges in the implementation of 5G and 6G networks. \Cref{seccionVLC} focuses on VLC systems, addressing weaknesses such as their dependence on line of sight, optical interference, and challenges in modulation and bidirectional communication. \Cref{seccionConvergencia} proposes an architecture that links the radio signal capture system, the indoor distribution network, and VLC systems, and discusses the conditions and enabling technologies for hybrid RF-VLC systems and their possible application scenarios.
-    
-% \textcolor{blue}{Este capitulo analiza las limitaciones actuales de las tecnologías RF y VLC en entornos interiores, con el objetivo de identificar oportunidades para mejorar la comunicación inalámbrica en estos espacios. La Sección \ref{seccionRFLimitaciones} aborda las tecnologías RF y sus limitaciones, abarcando problemas como la saturación del espectro, interferencias, y los desafíos específicos en la implementación de redes 5G, y 6G. La Sección  \ref{seccionVLC} se centra en los sistemas VLC, donde se abordarán debilidades como su dependencia de la línea de vista, interferencias ópticas y desafíos en la modulación y comunicación bidireccional. La Sección  \ref{seccionConvergencia} se propone una arquitectura que vincule el sistema de captación de señales de radio, la red de distribución de estas en interiores y los sistemas VLC y se discutirán las condiciones y las tecnologías habilitantes para dar lugar a los sistemas híbridos RF-VLC y sus posibles escenarios de aplicación. }
 
 % \subsection{Tecnología RF y sus Limitaciones en Entornos Indoor}
 \subsection{RF Technology and Its Limitations in Indoor Environments}
@@ -43,11 +32,7 @@ This chapter analyzes the current limitations of RF and VLC technologies in indo
 
     RF technologies in indoor environments can experience significant attenuation due to absorption by walls and other obstacles, which is especially problematic at higher frequencies such as the millimeter waves used in 5G \cite{Singh2017} [42]. Attenuation increases in densely populated areas, where multiple reflections and scattering further complicate signal propagation \cite{Echarri} [43]. In these environments where there is human movement, signal blocking by bodies and scattering by objects affect the quality of signal propagation in 28 GHz links \cite{Dalveren2019,Benzaghta2021} [44], [45]. In addition, the coexistence of multiple wireless devices and systems generates electromagnetic interference that can affect network performance, increasing latency and the likelihood of data loss \cite{Chiaramello2019} [46].
 
-    % \textcolor{blue}{Las tecnologías RF en entornos Indoor pueden experimentar una atenuación significativa debido a la absorción por paredes y otros obstáculos, lo cual es especialmente problemático en frecuencias más altas como las ondas milimétricas utilizadas en 5G \cite{Singh2017}. La atenuación se incrementa en áreas densamente pobladas, donde las múltiples reflexiones y la dispersión complican aún más la propagación de la señal \cite{Echarri}. En estos entornos donde hay movimiento humano, el bloqueo de la señal por los cuerpos y la dispersión por objetos afectan la calidad de la propagación de la señal en enlaces a 28 GHz \cite{Dalveren2019,Benzaghta2021}. También, la coexistencia de múltiples dispositivos y sistemas inalámbricos genera interferencias electromagnéticas que pueden afectar el rendimiento de la red, aumentando la latencia y la probabilidad de pérdida de datos \cite{Chiaramello2019}. }
-
     On the other hand, saturation in Internet of Things (IoT) devices will continue to grow. As applications in environments such as smart cities, digital health, and industry continue to expand, IoT systems are forced to handle large volumes of data, facing various limitations, such as energy consumption and data transmission reliability  \cite{Ebenezer2023} [47]. These factors have led to significant saturation, to the point of a shortage of available spectrum, especially in unlicensed bands such as ISM 2.4GHz \cite{Hou2022} [48]. To address these challenges related to signal attenuation and spectrum saturation, it is essential to understand how the radio spectrum is distributed and used in different frequency bands. Below (see \Cref{tabla1}) are some of the technologies that operate in each of these bands. This information allows us to visualize the areas of greatest congestion and the opportunities for implementing new developments that optimize the performance and management of wireless networks.
-    
-    % \textcolor{blue}{Para abordar estos desafíos relacionados con la atenuación de señales y la saturación del espectro, es fundamental comprender cómo se distribuye y utiliza el espectro radioeléctrico en diferentes bandas de frecuencia. A continuación, se presentan (Ver Tabla \ref{tabla1}) algunas de las tecnologías que operan en cada una de ellas. Esta información permite visualizar las áreas de mayor congestión y las oportunidades para la implementación de nuevos desarrollos que optimicen el rendimiento y la gestión de las redes inalámbricas. }
 
     
     \begin{table}[ht!]
@@ -72,8 +57,6 @@ This chapter analyzes the current limitations of RF and VLC technologies in indo
 
 
     To overcome some of the limitations of conventional wireless technologies, it is necessary to explore alternatives in different regions of the electromagnetic spectrum in order to reduce interference and increase efficiency in indoor environments. In the following section, we will discuss visible light communication in detail, analyzing its benefits, limitations, and potential integration with other technologies. to optimize performance in indoor environments.
-
-     % \textcolor{blue}{Para superar algunas de las limitaciones de las tecnologías inalámbricas convencionales, es necesario explorar alternativas en diferentes regiones del espectro electromagnético, con el fin de reducir interferencias y aumentar la eficiencia en ambientes cerrados. En la siguiente sección, abordaremos en detalle la comunicación por luz visible, analizando sus beneficios, limitaciones y su potencial integración con otras tecnologías para optimizar el rendimiento en entornos Indoor. }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%COPIA TABLA%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{table*}[ht!]
@@ -117,16 +100,10 @@ This chapter analyzes the current limitations of RF and VLC technologies in indo
 
     Unlike RF signals, which operate in a regulated and licensed spectrum range, mainly between 3 kHz and 300 GHz, VLC technology operates in the visible range of 400 to 800 THz, a part of the spectrum considerably higher than that allocated to radio communications; this difference in frequency range allows both technologies to coexist without interference. Visible light communication, in addition to being license-free \cite{Mushfique2018} [79], offers benefits such as greater energy efficiency and a greater capacity to transmit data at high speeds \cite{Chi2020} [80]. Compared to RF, VLC uses energy more efficiently, as it can take advantage of existing LED lighting infrastructure, allowing data transmission with almost no additional energy consumption while simultaneously providing illumination \cite{Chamani2022,Nawawi2019} [81], [82]. The transmitters used in VLC systems are LEDs, which can be modulated at high speeds for data transmission \cite{Farid2022,Kong2018} [83], [84], while the receivers use photodetectors such as photodiodes \cite{Bishnu2018} [85] or silicon photomultipliers (SiPM) \cite{Ahmed2019}  [86], designed to capture modulated light and decode information. \Cref{tabla2} presents some of these devices for visible light communication along with their possible technical applications.
 
-    % \textcolor{blue}{A diferencia de las señales RF, que operan en un rango de espectro regulado y licenciado, principalmente entre 3 kHz y 300 GHz, la tecnología VLC opera en el rango visible de 400 a 800 THz, una parte del espectro considerablemente más alta que el asignado a las radiocomunicaciones; esta diferencia en el rango de frecuencias permite que ambas tecnologías coexistan sin interferencias. La comunicación por luz visible, además de estar exenta de licencias \cite{Mushfique2018}, ofrece beneficios como una mayor eficiencia energética y una mayor capacidad para transmitir datos a altas velocidades \cite{Chi2020}. En comparación con las RF, VLC utiliza energía de manera más eficiente, ya que puede aprovechar la infraestructura de iluminación LED existente, lo que permite una transmisión de datos casi sin consumo energético adicional mientras ilumina simultáneamente \cite{Chamani2022,Nawawi2019}. Los transmisores usados en los sistemas VLC son los LEDs, que se pueden modular a altas velocidades para la transmisión de datos \cite{Farid2022,Kong2018}, mientras que los receptores usan fotodetectores como fotodiodos \cite{Bishnu2018} o fotomultiplicadores de silicio (Por sus siglas en ingles SiPM) \cite{Ahmed2019}, diseñados para capturar la luz modulada y decodificar la información. }
-
-    % \textcolor{blue}{En la Tabla \ref{tabla2} se presentan algunos de estos dispositivos para comunicación por luz visible junto con sus posibles aplicaciones técnicas.  }
-
     % \subsection{ Tecnología LED }
     \paragraph{LED technology}
     Light-emitting diodes have transformed modern lighting thanks to their energy efficiency and durability. Physically, they are PN-type junction semiconductor devices, where the P junction is doped with acceptor atoms and the N junction is doped with donor atoms, which, when directly polarized, allow current to flow in one direction through the semiconductor material, causing radioactive recombination of electrons and holes in the depletion region; This causes photons to be emitted in the form of light \cite{Cengiz2022} [87]. LEDs can be classified according to the semiconductor material used \cite{Rahman2014} \cite{Marciniak2019} [88] [89] or their specific application. Among the most common types are infrared LEDs, used mainly in remote controls and proximity sensors. On the other hand, red, green, and blue (RGB) LEDs have been fundamental in the development of displays \cite{Wang2022} [90] and adjustable lighting systems, where the mixture of these colors allows for a wide range of colors \cite{Muthu2002} [91]. The emission color of LEDs is related to semiconductor materials with which they are manufactured; \Cref{LED Semiconductor Materials} provides a brief overview of this.
     
-    % \textcolor{blue}{Los diodos emisores de luz han transformado la iluminación actual gracias a su eficiencia energética y durabilidad. Físicamente, son dispositivos semiconductores de unión tipo PN, donde la juntura P esta dopada de átomos aceptores y la juntura N esta dopada de átomos donadores, que cuando son polarizados directamente, permiten que la corriente circule en un sentido por el material semiconductor, ocasionando una recombinación radiactiva de electrones y huecos en la región de agotamiento; esto hace que se produzca una emisión de fotones en forma de luz \cite{Cengiz2022}. Los LEDs pueden clasificarse según el material semiconductor utilizado \cite{Rahman2014} \cite{Marciniak2019} o su aplicación específica. Entre los tipos más comunes se encuentran los LEDs infrarrojos, empleados principalmente en controles remotos y sensores de proximidad. Por otro lado, los LEDs de colores rojo, verde y azul (RGB) han sido fundamentales en el desarrollo de pantallas \cite{Wang2022} y sistemas de iluminación ajustable, donde la mezcla de estos colores permite obtener una amplia gama de colores \cite{Muthu2002}. El color de emision de los LEDs está relacionado con los materiales semiconductores con los que estos son fabricados, en la \Cref{LED Semiconductor Materials} podemos ver una pequeña referencia de esto.}
-
 
     \begin{table}[ht!]
         \centering
@@ -154,21 +131,13 @@ This chapter analyzes the current limitations of RF and VLC technologies in indo
 
     White LEDs, essential in general lighting, can be obtained using two main methods: combining RGB LEDs or using blue LEDs coated with phosphor. In the first case, white light is generated by mixing three individual primary color LEDs (RGB), allowing f o r precise adjustments in color reproduction. In the second method, a blue LED excites a layer of yellow phosphor, generating highly efficient, low-cost white light, which has become the dominant technology in the lighting market. 
     
-    % \textcolor{blue}{Los LEDs blancos, esenciales en iluminación general, pueden obtenerse mediante dos métodos principales: la combinación de LEDs RGB o el uso de LEDs azules con recubrimiento de fósforo. En el primer caso, la luz blanca se genera mediante la mezcla de tres LEDs individuales de colores primarios (RGB), lo que permite ajustes precisos en la reproducción de colores a partir de los mismos. En el segundo método, un LED azul excita una capa de fósforo amarillo, generando una luz blanca de gran eficiencia y bajo costo, por la cual se ha convertido en la tecnología dominante en el mercado de iluminación. }
-
     Other relevant types include ultraviolet LEDs, widely used in sterilization processes, substance detection, and material curing in industrial and medical applications. Finally, high-brightness and high-power LEDs have been designed for demanding applications, such as architectural lighting and the automotive industry, where high light intensity and high resistance to adverse environmental conditions are required. The response of LEDs is presented below in general terms, given that it is key to consider that in any VLC system, the transmission process will depend directly on this characteristic.
-    
-    % \textcolor{blue}{Otros tipos relevantes incluyen los LEDs ultravioleta, ampliamente utilizados en procesos de esterilización, detección de sustancias y curado de materiales en aplicaciones industriales y médicas. Finalmente, los LEDs de alto brillo y potencia han sido diseñados para aplicaciones exigentes, como la iluminación arquitectónica y la industria automotriz, donde se requiere una alta intensidad luminosa y una gran resistencia a condiciones ambientales adversas. A continuación se presenta la respuesta de los LEDs de forma general, dado que es clave considerar que en cualquier sistema VLC, el proceso de transmisión dependerá directamente de esta característica. }
 
     % \subsection{ Respuesta en Frecuencia del LED}
     \paragraph{LED Frequency Response}
     White light can be reproduced using LED technology, either through a combination of RGB LED luminaires or blue LEDs with one or more layers of phosphor. Commercially, the most common are blue LED bulbs with a layer of yellow phosphor \cite{Li2022} [93], which is used to convert the blue light emitted by the LED chip into white light. This is achieved by emitting yellow light which, when combined with blue light, produces high-quality white light. These LEDs have the advantage of being cheaper, easier to manufacture, and having good luminous efficiency, offering a simple and efficient way to generate white light, albeit with a slight reduction in the color rendering index \cite{Chen2019} [94]. 
-    
-    % \textcolor{blue}{La luz blanca puede reproducirse por medio de tecnología LED, ya sean por una combinación de luminarias LEDs RGB o LEDs azules con una o varias capas de fósforo. Comercialmente las más comunes, son las bombillas LEDs Azul con una capa de fósforo amarillo \cite{Li2022}; la cual se utiliza para convertir la luz azul emitida por el chip LED en luz blanca. Esto se logra mediante la emisión de luz amarilla que, al combinarse con la luz azul, produce una luz blanca de alta calidad. Estos LEDs cuentan con la ventaja de ser más baratos, fáciles de fabricar y tienen buena eficiencia luminosa; lo que ofrece una forma sencilla y eficiente de generar luz blanca, aunque con una ligera reducción en el índice de reproducción cromática \cite{Chen2019}. }
 
     A frequency response of around 2 MHz is commonly observed in white LEDs based on blue LED technology with yellow phosphor, as reported in various studies \cite{Chen2019} [94]. This behavior is mainly due to the decay time of the yellow phosphor, which is on the order of 80 ns, resulting in a 3 dB bandwidth close to 2 MHz. This parameter is crucial in determining the modulation capability of these devices for indoor visible communications applications \cite{Wang2024,Park2004,Sun2015} [95]–[97]. Furthermore, the modulation offered by these LEDs is perfectly aligned with the speed and light quality requirements necessary for commercial visible communications systems, while simultaneously enabling high light efficiency \cite{Hu2015} [98] and a good color rendering index \cite{Zhang2018} [99].
-    
-    % \textcolor{blue}{La respuesta en frecuencia de alrededor de 2 MHz es comúnmente observada en los LEDs blancos basados en tecnología de LED azul con fósforo amarillo, tal como se ha reportado en diversos estudios \cite{Chen2019}. Este comportamiento se debe fundamentalmente al tiempo de decaimiento del fósforo amarillo, que es del orden de 80 ns, lo que resulta en un ancho de banda 3 dB cercano a los 2 MHz. Este parámetro es crucial para determinar la capacidad de modulación de estos dispositivos y se ha consolidado como un estándar en la industria para aplicaciones de comunicaciones visibles en interiores \cite{Wang2024,Park2004,Sun2015}. Además, la modulación que ofrecen estos LEDs se alinea perfectamente con los requerimientos de velocidad y calidad lumínica necesarios para sistemas comerciales de comunicaciones visibles, permitiendo, simultáneamente, una alta eficiencia lumínica \cite{Hu2015} y un buen índice de reproducción cromática \cite{Zhang2018}.  }
 
     %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
 
@@ -180,24 +149,13 @@ This chapter analyzes the current limitations of RF and VLC technologies in indo
     
     %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
     
+    
     % \subsection{Dependencia de LOS y Desafíos de Interferencia en Sistemas VLC}
     \paragraph{Dependence on LOS and Interference Challenges in VLC Systems}
     Visible light communication systems rely heavily on Line of Sight (LOS) to achieve optimal performance between the transmitting LED and the receiver. This is key, as diffuse or non-directional configurations limit the achievable rate. LOS increases the intensity of the received signal and implies a higher SNR, which allows for an increase in the data rate or link distance and reduces the risk of Inter-Symbol Interference (ISI) \cite{Ghassemlooy2017} [92]. When obstructions are present, communication links can suffer a significant drop in performance. This LOS dependence has motivated studies to improve blocking tolerance, either through reflective surfaces or beam angle optimization technologies \cite{Cao2019,Hamad2023} [101], [102].
     
-    % \textcolor{blue}{Los sistemas de comunicación por luz visible dependen en gran medida de una Linea de Vista (Por siglas en inglés Line of Sight - LOS) para lograr un rendimiento óptimo entre el LED transmisor y el receptor. Es clave contar con ella; ya que configuraciones difusas o sin dirección específica limitan la tasa alcanzable. La LOS aumenta la intensidad de la señal recibida e implica una mayor SNR, lo que permite incrementar la tasa de datos o la distancia del enlace y reduce el riesgo de interferencia entre símbolos (Por sus siglas en inglés Inter-Symbol Interference -  ISI) \cite{Ghassemlooy2017}. Cuando existen obstrucciones, los enlaces de comunicación pueden sufrir una caída significativa en el rendimiento. Esta dependencia de LOS ha motivado estudios para mejorar la tolerancia al bloqueo, ya sea mediante superficies reflejantes o tecnologías de optimización de ángulo de emisión \cite{Cao2019,Hamad2023}. }
-
-    % %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
-
-    % \begin{figure}[htbp]
-    % \centerline{\includegraphics[scale=0.4]{figures/LOS_NLOS.jpg}}
-    % \caption{LOS, NLOS, Diffuse Link, Quasi-diffuse.}
-    % \label{LOS_NLOS}
-    % \end{figure}
-    
     % %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
     In \Cref{LOS_NLOS} Figure 4, the authors mention four possible configurations (LOS, NLOS, Diffuse, Quasi-Diffuse) which are key to channel modeling and a correct description of a VLC system \cite{Rahman2018} [100]. \Cref{tabla3} summarizes the main issues previously mentioned in visible light communication systems. To mitigate the negative effects of channel distortion and inter-symbol interference in communication systems, various compensation techniques have been developed. These techniques seek to maintain link quality and stability, improving system performance. Next, equalization will be addressed as one of the techniques relevant to our research.
-
-    % \textcolor{blue}{En la Figura \ref{LOS_NLOS}, los autores mencionan cuatro posibles configuraciones (LOS, NLOS, Difusa, Quasi-Difusa) las cuales son claves para el modelado del canal y una correcta descripción de un sistema VLC \cite{Rahman2018}.  En la Tabla \ref{tabla3} se recopilan las principales problemáticas previamente mencionadas en sistemas de comunicación por luz visible. Para mitigar los efectos negativos de la distorsión del canal y la interferencia entre símbolos en sistemas de comunicación, se han desarrollado diversas técnicas de compensación. Estas técnicas buscan mantener la calidad y estabilidad del enlace, mejorando el desempeño del sistema. A continuación se abordará la ecualización como una de las técnicas pertinentes a nuestra investigación. }
 
 
     \begin{table}[ht!]
@@ -217,33 +175,24 @@ This chapter analyzes the current limitations of RF and VLC technologies in indo
     \label{tabla3}
     \end{center}
     \end{table}
-
-
+    
 % \subsection{Técnicas de Compensación de Errores}
 \paragraph{Error Compensation Techniques}
 Error compensation techniques are fundamental in communications systems, as they allow for the mitigation of adverse effects of the transmission channel, such as noise, dispersion, and interference \cite{Djordjevic2022} [109], thus ensuring integrity of the information received. Among the various existing techniques, the following are particularly noteworthy: channel error correction (Error Correction Coding, ECC) \cite{Mambou2021} [110] and equalization \cite{Metzger2011} [111]. Where ECC adds redundancy to the transmitted data, allowing errors to be detected and corrected in the receiver, while equalization combats distortion by adjusting the signal to counteract unwanted effects \cite{Nguyen2019} [112].
 
-% \textcolor{blue}{Las técnicas de compensación de errores son fundamentales en sistemas de comunicaciones, ya que permiten mitigar los efectos adversos del canal de transmisión, como el ruido, la dispersión y las interferencias \cite{Djordjevic2022}, asegurando así la integridad de la información recibida. Dentro de las diversas técnicas existentes, se destacan especialmente: la corrección de errores en canal (Error Correction Coding, ECC) \cite{Mambou2021}  y la ecualización \cite{Metzger2011}. Donde el ECC agrega redundancia a los datos transmitidos, permitiendo detectar y corregir errores en el receptor, mientras que la ecualización combate la distorsión del canal ajustando la señal para contrarrestar efectos no deseados \cite{Nguyen2019}. }
-
 In optical communications, and especially in VLC, error compensation is particularly important due to the variable and unpredictable nature of the optical channel \cite{Mambou2021} [110], which is affected by multipath dispersion, noise, and the limitations of the transmitting and receiving devices \cite{Shapiro2023} [113]. For this reason, pre-equalization and post-equalization techniques are used, and increasingly, hybrid methods that combine both strategies \cite{Cenqin2021} [114].
-
-% \textcolor{blue}{En las comunicaciones ópticas, y especialmente en VLC, la compensación de errores adquiere particular relevancia debido a la naturaleza variable e impredecible del canal óptico \cite{Mambou2021}, afectado por la dispersión multitrayectoria, el ruido y las limitaciones de los dispositivos emisores y receptores \cite{Shapiro2023}. Por ello, se emplean técnicas de pre-ecualización, pos-ecualización y, cada vez más, métodos híbridos que combinan ambas estrategias \cite{Cenqin2021}. }
 
 % \subsection{Ecualización}
 \paragraph{Equalization}
 
 Equalization is an essential technique in communication systems, whose objective is to counteract the distortions and limitations imposed by the transmission channel. These distortions may be due to the limited frequency response of the components, temporal dispersion, the non-linearity of the devices (such as LEDs in VLC), and interference between symbols. Equalization improves the quality of the received signal, increases the data transmission rate, and reduce the bit error rate (BER). There are different equalization strategies: pre-equalization, post-equalization, and combined schemes, each with specific advantages and limitations. The choice of the appropriate technique depends on the characteristics of the channel, the complexity allowed in the transmitter and receiver, and the performance requirements of the system.
 
-% \textcolor{blue}{La ecualización es una técnica esencial en los sistemas de comunicación, cuyo objetivo es contrarrestar las distorsiones y limitaciones impuestas por el canal de transmisión. Estas distorsiones pueden deberse a la respuesta en frecuencia limitada de los componentes, la dispersión temporal, la no linealidad de los dispositivos (como los LEDs en VLC) y la interferencia entre símbolos. La ecualización permite mejorar la calidad de la señal recibida, aumentar la tasa de transmisión de datos y reducir la tasa de error de bit (BER). Existen diferentes estrategias de ecualización: pre-ecualización, pos-ecualización y esquemas combinados, cada una con ventajas y limitaciones específicas. La elección de la técnica adecuada depende de las características del canal, la complejidad permitida en el transmisor y receptor, y los requisitos de rendimiento del sistema. }
-
 The combination of pre- and post-equalization can offer additional improvements in system robustness and efficiency, especially in channels with high dispersion or nonlinearity \cite{Siuzdak2022,Singh2022} [115], [116].
-
-% \textcolor{blue}{La combinación de pre- y pos-ecualización puede ofrecer mejoras adicionales en la robustez y eficiencia del sistema, especialmente en canales con alta dispersión o no linealidad \cite{Siuzdak2022,Singh2022}. }
 
 % %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
 
-    \begin{figure*}[b]
-    \centerline{\includegraphics[scale=0.35]{figures/RF-VLC/figure5.pdf}}
+    \begin{figure*}[ht!]
+    \centerline{\includegraphics[scale=0.34]{figures/RF-VLC/figure5.pdf}}
     % \caption{Amplificador RF y Filtro pasabanda en la entrada del receptor. Tomado de \cite{Carr2000}}
     \caption{Receptor Heterodineo. Tomado de \cite{Carr2000}.}
     \label{Heterorinaje-RF}
@@ -257,142 +206,191 @@ The combination of pre- and post-equalization can offer additional improvements 
 
 Pre-equalization is implemented in the transmitter and consists of modifying the signal before sending it, anticipating and compensating for foreseeable channel distortions. In optical and VLC systems, it is especially useful for counteracting the limited bandwidth and non-linearity of LEDs, thus allowing higher transmission rates and reducing complexity in the receiver \cite{Surampudi2022} [118]. Digital pre-equalization schemes have been shown to increase effective bandwidth and improve noise tolerance, achieving significant increases in data rate without the need for post-equalization \cite{Li2022} [93]. However, their effectiveness depends on precise knowledge of the channel and may be limited by the capacity of the pre-equalization circuits, especially in analog implementations \cite{Yan2020} [119].
 
-% \textcolor{blue}{La pre-ecualización se implementa en el transmisor y consiste en modificar la señal antes de enviarla, anticipando y compensando las distorsiones previsibles del canal. En sistemas ópticos y VLC, es especialmente útil para contrarrestar el ancho de banda limitado y la no linealidad de los LEDs, permitiendo así mayores tasas de transmisión y una reducción de la complejidad en el receptor \cite{Surampudi2022}. Los esquemas digitales de pre-ecualización han demostrado aumentar el ancho de banda efectivo y mejorar la tolerancia al ruido, logrando incrementos significativos en la tasa de datos sin necesidad de pos-ecualización \cite{Li2022}. Sin embargo, su eficacia depende de un conocimiento preciso del canal y puede estar limitada por la capacidad de los circuitos de pre-ecualización, especialmente en implementaciones analógicas \cite{Yan2020}. }
-
 On the other hand, post-equalization is applied in the receiver and uses adaptive filters or advanced algorithms to correct distortions affecting the received signal, such as ISI caused by temporal or modal dispersion. It is particularly useful when the channel is variable or difficult to model in the transmitter, although it can amplify noise and increase the complexity of the receiver \cite{Ge2020} [120]. In highly nonlinear channels or channels with a high signal-to-noise ratio, post-equalization can outperform pre-equalization in terms of received signal quality. Furthermore, the combination of both techniques (pre- and post-equalization) has been shown to improve the overall performance of the system, reducing the power required and improving the sensitivity of the receiver \cite{Siuzdak2019} [121].
-
-% \textcolor{blue}{Por otro lado, la pos-ecualización se aplica en el receptor y utiliza filtros adaptativos o algoritmos avanzados para corregir las distorsiones que afectan a la señal recibida, como la ISI causada por la dispersión temporal o modal. Es especialmente útil cuando el canal es variable o difícil de modelar en el transmisor, aunque puede amplificar el ruido y aumentar la complejidad del receptor \cite{Ge2020}. En canales altamente no lineales o con alta relación señal-ruido, la pos-ecualización puede superar a la pre-ecualización en términos de calidad de la señal recibida. Además, la combinación de ambas técnicas (pre y pos-ecualización) ha demostrado mejorar el rendimiento global del sistema, reduciendo la potencia requerida y mejorando la sensibilidad del receptor \cite{Siuzdak2019}. }
 
 % \subsubsection{Técnicas híbridas y tendencias recientes}
 \paragraph{Hybrid techniques and recent trends}
 Currently, VLC research is exploring hybrid approaches that combine pre-equalization and post-equalization, as well as advanced machine learning-based algorithms, to achieve greater robustness and flexibility \cite{LiangQiao2018,Chi2018} [122], [123]. For example, neural networks and deep learning are being applied to design adaptive equalizers that can significantly improve performance in changing environments \cite{Guan2018,Lu2025,Li2023} [124]–[126]. Furthermore, the trend toward integrating VLC with other technologies such as RF (e.g., hybrid RF-VLC systems) makes the study of adaptive and intelligent error compensation techniques even more relevant \cite{Sun2023,daSilva2024,Abdallah2025} [127]–[129]. In other words, the efficient treatment of errors in VLC systems depends on the appropriate combination of pre-equalization, post-equalization, and hybrid techniques, adjusted to the environment and the nature of the optical channel, which is crucial for the viability of robust RF-VLC hybrid systems.
-
-% \textcolor{blue}{Actualmente, las investigaciones en VLC exploran enfoques híbridos que combinan pre-ecualización y pos-ecualización, así como algoritmos avanzados basados en machine learning, para lograr mayor robustez y flexibilidad \cite{LiangQiao2018,Chi2018}. Por ejemplo, se están aplicando redes neuronales y aprendizaje profundo para diseñar ecualizadores adaptativos que pueden mejorar significativamente el desempeño en entornos cambiantes \cite{Guan2018,Lu2025,Li2023}. Además, la tendencia hacia la integración de VLC con otras tecnologías como RF (por ejemplo, sistemas híbridos RF-VLC) hace aún más relevante el estudio de técnicas de compensación de errores adaptativas e inteligentes \cite{Sun2023,daSilva2024,Abdallah2025}. En otras palabras, el tratamiento eficiente de los errores en sistemas VLC depende de la combinación adecuada de técnicas de pre-ecualización, pos-ecualización e híbridas, ajustadas al entorno y a la naturaleza del canal óptico, lo cual es crucial para la viabilidad de sistemas híbridos RF-VLC robustos.}
-
-% %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
-
-%     % \begin{figure*}[ht!]
-%     \begin{figure*}[b]
-%     \centerline{\includegraphics[scale=0.35]{figures/RF-VLC/Heterodinaje.pdf}}
-%     % \caption{Amplificador RF y Filtro pasabanda en la entrada del receptor. Tomado de \cite{Carr2000}}
-%     \caption{Receptor Heterodineo. Tomado de \cite{Carr2000}.}
-%     \label{Heterorinaje-RF}
-%     \end{figure*}
-    
-%     %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
     
 % \newpage
 \subsection{Convergence between RF \& VLC Systems}
     \label{seccionConvergencia}
 
- The convergence between radio frequency and visible light communication technologies is presented here not as a generic solution, but as a specific response to the need to capture an RF signal in an open environment and retransmit it efficiently in a confined space through an optical optical system. This proposal, which combines system Reception by antenna with retransmission using modulated light is based on principles widely described in the literature on superheterodyne receivers and the generalities of indoor VLC systems (see Figure 5 and Figure 6, respectively), where the use of mixers and local oscillators allows the signal frequency to be adapted for subsequent processing without loss of fidelity [117]. By integrating these elements with a VLC optical channel, the aim is to Take advantage of low interference, high security, and the growing availability of indoor LED infrastructure to operate in indoor spaces \cite{Karunatilaka2015} [38].
+ The convergence between radio frequency and visible light communication technologies is presented here not as a generic solution, but as a specific response to the need to capture an RF signal in an open environment and retransmit it efficiently in a confined space through an optical optical system. This proposal, which combines system Reception by antenna with retransmission using modulated light is based on principles widely described in the literature on superheterodyne receivers and the generalities of indoor VLC systems (see Figure 5 and Figure 6, respectively), where the use of mixers and local oscillators allows the signal frequency to be adapted for subsequent processing without loss of fidelity \cite{Carr2000} [117]. By integrating these elements with a VLC optical channel, the aim is to Take advantage of low interference, high security, and the growing availability of indoor LED infrastructure to operate in indoor spaces \cite{Karunatilaka2015} [38].
 
-\textcolor{blue}{La convergencia entre las tecnologías de radio frecuencias y comunicación por luz visible se plantea aquí no como una solución genérica, sino como una respuesta específica a la necesidad de captar una señal RF en un entorno abierto y retransmitirla de forma eficiente en un espacio confinado a través de un sistema óptico. Esta propuesta, que combina recepción por antena con retransmisión mediante luz modulada, se fundamenta en principios ampliamente descritos en la literatura sobre receptores superheterodinos y las generalidades de los sistemas VLC Indoor (ver \Cref{Heterorinaje-RF} $\And$ \Cref{VLC-Indoor} respectivamente), donde el uso de mezcladores y osciladores locales permite adaptar la frecuencia de la señal para su posterior procesamiento sin pérdida de fidelidad \cite{Carr2000}. Al integrar estos elementos con un canal óptico VLC, se busca aprovechar la baja interferencia, la alta seguridad y la creciente disponibilidad de infraestructura LED en interiores para operar en espacios Indoor \cite{Karunatilaka2015}. }
-
-\textcolor{blue}{Adicional; para minimizar errores y facilitar la integración de componentes, se propone el uso de módulos preensamblados; como mezcladores, amplificadores de bajo ruido (LNA, por sus siglas en inglés) y circuitos de acoplamiento tipo Bias-T, que permitan garantizar la estabilidad operativa del sistema durante las pruebas. Esta investigación se basa en la premisa de que es posible no solo combinar las ventajas de ambas tecnologías, sino diseñar un flujo de señal continuo y funcional que mantenga una relación SNR uniforme incluso en entornos físicamente hostiles. La descripción técnica del proceso de heterodinaje y la implementación detallada del sistema híbrido se desarrolla en la siguiente subsección. }
-
-    % %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
-
-    % \begin{figure*}[ht!]
-    % \centerline{\includegraphics[scale=0.35]{figures/RF-VLC/Heterodinaje.pdf}}
-    % % \caption{Amplificador RF y Filtro pasabanda en la entrada del receptor. Tomado de \cite{Carr2000}}
-    % \caption{Receptor Heterodineo. Tomado de \cite{Carr2000}.}
-    % \label{Heterorinaje-RF}
-    % \end{figure*}
-    
-    % %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
+Additionally, to minimize errors and facilitate component integration, the use of pre-assembled modules is proposed, such as mixers, low-noise amplifiers (LNA), and Bias-T coupling circuits, which ensure the operational stability of the system during testing. This research is based on the premise that it is possible not only to combine the advantages of both technologies, but also to design a continuous and functional signal flow that maintains a uniform SNR even in physically hostile environments. The technical description of the heterodyning process and the detailed implementation of the hybrid system are developed in the following subsection.
 
     %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
 
     \begin{figure*}[ht!]
-    \centerline{\includegraphics[scale=0.4]{figures/RF-VLC/figure6.pdf}}
+    \centerline{\includegraphics[scale=0.35]{figures/RF-VLC/figure6.pdf}}
     \caption{Generalidad de los Sistemas VLC-Indoor \cite{Karunatilaka2015}.}
     \label{VLC-Indoor}
+    \vspace{10pt} % Espacio opcional entre la leyenda y la línea
+    \rule{\textwidth}{0.2pt} % Mismo ancho que la imagen
+    \vspace{8pt} % Espacio opcional entre la leyenda y la línea
     \end{figure*}
     
     %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
     
 % \subsection{Sistema Híbrido Propuesto}
-\paragraph{Sistema Híbrido Propuesto}
-\textcolor{blue}{Este trabajo de tesis de maestría propone un sistema híbrido de comunicaciones que integra tecnología RF con un sistema VLC, el planteamiento se sustenta en la revisión de la literatura especializada y los diferentes estudios hallados, los cuales denotan la complementariedad entre ambos dominios para escenarios de alta demanda espectral y seguridad localizada \cite{BravoAlvarez2023}. Inspirados en estos enfoques, se plantea un diseño que aprovecha la penetración y robustez de la RF, junto con la direccionalidad, seguridad física y amplio espectro libre que ofrece la VLC \cite{Wang2023}. El sistema se compone de dos etapas principales: la primera etapa es captación y procesamiento de señales RF para su conversión al dominio óptico; y la segunda se encarga de la recepción y demodulación de la señal VLC para recuperar la información base. Las especificaciones de rangos y características de los equipos se presentan en la \Cref{Componentes del Transmisor Híbrido.} \& \Cref{Componentes del Receptor Híbrido}. }
+\paragraph{Proposed Hybrid System}
+This paper proposes a hybrid communications system that integrates RF technology with a VLC system. The approach is based on a review of the specialized literature and the various studies found, which highlight the complementarity between both domains for scenarios with high spectral demand and localized security \cite{BravoAlvarez2023} [130]. Inspired by these approaches, a design is proposed that takes advantage of the penetration and robustness of RF, together with the directionality, physical security, and wide free spectrum offered by VLC \cite{Wang2023} [131]. The system consists of two main stages: the first stage is the capture and processing of RF signals for conversion to the optical domain; and the second stage is responsible for receiving and demodulating the VLC signal to recover the base information. The range specifications and characteristics of the equipment are presented in \Cref{Componentes del Transmisor Híbrido.} \& \Cref{Componentes del Receptor Híbrido}.
+% \smallskip
+\paragraph{Transmission Stage of the RF–VLC Hybrid System}
+In this stage, the RF signal is picked up by an antenna dipole coupled to a USRP 2900; which provides the necessary flexibility for signal processing. This signal is then connected to a low-noise amplification block; it is then fed to an AD831 mixer, which, in conjunction with a local oscillator,
+implements RF heterodyning, shifting the signal to a desired intermediate frequency (IF). It is then coupled to the optical emitter via a bias tee, which is used to apply a DC signal necessary to polarize and turn on the LED, which is used as an optical modulator in an IM/DD scheme to emit the signal in
+the visible light domain \cite{Yeh2015} [132]. 
 
-% \subsubsection{Etapa de Transmisión del Sistema Híbrido RF–VLC}  
-\paragraph{Etapa de Transmisión del Sistema Híbrido RF–VLC} 
     %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
     % \begin{figure*}[ht!]
     \begin{figure*}[ht!]
-    \centerline{\includegraphics[scale=0.6]{figures/RF-VLC/figure7.jpg}}
+    \centerline{\includegraphics[scale=0.565]{figures/RF-VLC/figure7.jpg}}
     \caption{Transmisor Híbrido Propuesto.}
     \label{Tx-Hibrido}
+    % \vspace{10pt} % Espacio opcional entre la leyenda y la línea
+    \rule{\textwidth}{0.2pt} % Mismo ancho que la imagen
+    \vspace{20pt} % Espacio opcional entre la leyenda y la línea
     \end{figure*}
     %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
-\textcolor{blue}{En esta etapa, la señal RF es tomada por una antena dipolo acoplada a una {USRP 2900}; la cual proporciona la flexibilidad necesaria para el tratamiento de la señal. Luego esta señal se conecta a un bloque de amplificación de bajo ruido; después se conduce hacia un {mezclador AD831}, que, en conjunto con un oscilador local, implementa el heterodinaje RF, trasladando la señal a una frecuencia intermedia (IF por sus siglas en Inglés) deseada. Posteriormente se acopla al emisor óptico mediante un {Bias Tee}; usado  para aplicar uan señal DC necesaria para polarizar y encender el {LED} el cual es empleado como modulador óptico en esquema IM/DD para emitir la señal en el dominio de la luz visible \cite{Yeh2015}. }
-
-%%%%% NUEVA VERSION DE LA TABLA %%%%%%%%%%%
-\begin{table}[ht!]
-    \caption{\textbf{Componentes del Transmisor Híbrido.}}
-    \centering
-    \footnotesize
-    \renewcommand{\arraystretch}{1.3}
-    \begin{tabular}{@{}p{3cm}>{\raggedright\arraybackslash}p{6cm}@{}}
-    \hline
-    \textbf{\textit{Dispositivo}} & \textbf{\textit{Descripción}} \\ 
-    \hline
-    Low-Noise Amplifier  & Amplificador RF banda ancha de alta ganancia (30\,dB), con rango de Operación de 0,1--2000 MHz. \\
-    \hline
-    Mixer - AD831 & Mezclador de un solo chip de amplio rango dinámico y baja distorsión, opera entre 0,1--500\,MHz con 10\,dBm de ganancia, con condensadores de aislamiento DC. \\
-    \hline
-    Bias Tee & RF Microondas HF Bias Tee DC Bias 50K--60\,MHz. Fuente de alimentación de antena activa. \\
-    \hline
-    LED Azul con Fósforo Amarillo & Linterna de luz blanca convencional con una respuesta en frecuencia típica de 2MHz. \\
-    \hline
-    USRP 2900, 2901 & Del fabricante National Instruments con un rango de operación RF entre los 70\,MHz--6\,GHz. \\
-    \hline
-    \end{tabular}
-    \label{Componentes del Transmisor Híbrido.}
-\end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[ht!]
-    \caption{\textbf{Componentes del Receptor Híbrido.}}
-    \centering
-    \footnotesize
-    \renewcommand{\arraystretch}{1.3}
-    \begin{tabular}{@{}p{3cm}>{\raggedright\arraybackslash}p{5.5cm}@{}}
-    \hline
-    \textbf{\textit{Dispositivo}} & \textbf{\textit{Descripción}} \\ 
-    \hline
-    Sensor Óptico ThorLabs & Del fabricante ThorLabs con referencia PDA25K(-EC) y ganancia ajustable.\\
-    \hline
-    Bias Tee & RF Microondas HF Bias Tee DC Bias 50K--60\,MHz. Fuente de alimentación de antena activa.\\
-    \hline
-    Low-Noise Amplifier & Amplificador RF banda ancha de alta ganancia (30\,dB), con rango de Operación de 0,1--2000 MHz.\\
-    \hline
-    Mixer AD831 & Mezclador de un solo chip de amplio rango dinámico y baja distorsión, opera entre 0,1--500\,MHz con 10\,dBm de ganancia, con condensadores de aislamiento DC.\\
-    \hline
-    RTL2832U & El RTL2832U es un chip popular utilizado en dongles de software-defined radio (SDR)\\
-    \hline
-    USRP 2900 & Del fabricante {National Instruments} con un rango de operación RF entre los 70\,MHz--6\,GHz.\\
-    \hline
-    \end{tabular}
-    \label{Componentes del Receptor Híbrido}
-\end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% \subsubsection{Etapa de Recepción del Sistema Híbrido RF-VLC} 
-\paragraph{Etapa de Recepción del Sistema Híbrido RF-VLC} 
-%%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
-    \begin{figure*}[htbp]
-        \centerline{\includegraphics[scale=0.6]{figures/RF-VLC/figure8.jpg}}
+    %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
+    \begin{figure*}[ht!]
+        \centerline{\includegraphics[scale=0.5]{figures/RF-VLC/figure8.jpg}}
         \caption{Rx Híbrido.}
         \label{Rx-Hibrido}
+        % \vspace{10pt} % Espacio opcional entre la leyenda y la línea
+        % \rule{\textwidth}{0.2pt} % Mismo ancho que la imagen
+        % \vspace{22pt} % Espacio opcional entre la leyenda y la línea
     \end{figure*}
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
+% \smallskip
+% \subsubsection{Etapa de Recepción del Sistema Híbrido RF-VLC} 
+\paragraph{RF-VLC Hybrid System Reception Stage} 
+The optical signal emitted by the LED is captured by a ThorLabs PDA25K(-EC) sensor, chosen for its high sensitivity in the visible range. In this reverse process, it is necessary to extract the DC component of the signal, which is done using a Bias Tee (with the same technical specifications as the transmission stage). The signal is then amplified with an LNA module identical to the one used in the transmission stage to maintain symmetry in the processing chain. 
+Next, the previous block is connected to an AD831 mixer which, together with a USRP 2901 as a local oscillator, performs the inverse frequency conversion, allowing the original base signal to be recovered. Finally, the recovered signal is connected to an RTL2832U, a device widely used for reception testing in various RF bands. This design is based on the use of pre-assembled electronic components, whose benefits include accelerated construction and experimental validation, high compatibility with open-source software platforms, and a reliable basis for academic experimentation.
+The proposed hybrid system offers a functional and reproducible solution that articulates the conversion of RF signals to the VLC domain and their subsequent recovery, opening the door to new experimental applications. The technical details can be seen in Table VII. The following section describes the entire methodological process of technological integration. 
 
-\textcolor{blue}{La señal óptica emitida por el LED es captada mediante un sensor {ThorLabs PDA25K(-EC)}, elegido por su alta sensibilidad en el rango visible. En este proceso inverso; es necesario extraer la componente DC de la señal, esto se realiza mediante un {Bias Tee} (con las mismas especificaciones técnicas de la etapa de transmisión). Seguido se amplifica la señal con un módulo LNA idéntico al empleado en la etapa de transmisión para mantener la simetría en la cadena de procesamiento. }
+% %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
+%     \begin{figure*}[ht!]
+%         \centerline{\includegraphics[scale=0.6]{figures/RF-VLC/figure8.jpg}}
+%         \caption{Rx Híbrido.}
+%         \label{Rx-Hibrido}
+%     \end{figure*}
+% %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
 
-\textcolor{blue}{A continuación, el bloque anterior se conecta a un {mezclador AD831} que en conjunto con una {USRP 2901} como osclilador local; realizan la conversión inversa de frecuencia, permitiendo recuperar la señal base original. Finalmente, la señal recuperada se conectan a un {RTL2832U}; dispositivo ampliamente utilizado para pruebas de recepción en diversas bandas RF. Este diseño se basa en el uso de componentes electrónicos preensamblados, cuyos beneficios incluyen la aceleración de la construcción y validación experimental, la alta compatibilidad con plataformas de software libre y una base confiable para la experimentación académica. El sistema híbrido propuesto ofrece una solución funcional y reproducible que articula la conversión de señales RF al dominio VLC y su posterior recuperación, abriendo la puerta a nuevas aplicaciones experimentales. Lo detalles técnicos se pueden observar en la \Cref{Componentes del Receptor Híbrido}, en la siguiente sección se describe todo el proceso metodológico de la integración tecnológica. }
+%%% OTRA VERSION DE TABLAS
+\begin{table*}[ht!]
+    \centering
+    \footnotesize
+    \renewcommand{\arraystretch}{1.3}
+
+    %------------ TABLA IZQUIERDA (TX) -----------------
+    \begin{minipage}[t]{0.48\textwidth}
+        \caption{\textbf{Componentes del Transmisor Híbrido.}}
+        \label{tab:tx_hibrido}
+        \centering
+        \begin{tabular}{@{}p{3cm}>{\raggedright\arraybackslash}p{5cm}@{}}
+        \hline
+        \textbf{\textit{Dispositivo}} & \textbf{\textit{Descripción}} \\ 
+        \hline
+        Low-Noise Amplifier  & Amplificador RF banda ancha de alta ganancia (30\,dB), 
+        con rango de operación de 0,1--2000\,MHz. \\
+        \hline
+        Mixer - AD831 & Mezclador de un solo chip de amplio rango dinámico y baja distorsión, 
+        opera entre 0,1--500\,MHz con 10\,dBm de ganancia, con condensadores de aislamiento DC. \\
+        \hline
+        Bias Tee & RF Microondas HF Bias Tee DC Bias 50K--60\,MHz. Fuente de alimentación de antena activa. \\
+        \hline
+        LED Azul con Fósforo Amarillo & Linterna de luz blanca convencional con una respuesta en frecuencia típica de 2\,MHz. \\
+        \hline
+        USRP 2900, 2901 & Del fabricante National Instruments con un rango de operación RF 
+        entre los 70\,MHz--6\,GHz. \\
+        \hline
+        \end{tabular}
+    \end{minipage}
+    \hfill
+    %------------ TABLA DERECHA (RX) -----------------
+    \begin{minipage}[t]{0.48\textwidth}
+        \caption{\textbf{Componentes del Receptor Híbrido.}}
+        \label{tab:rx_hibrido}
+        \centering
+        \begin{tabular}{@{}p{3cm}>{\raggedright\arraybackslash}p{5.7cm}@{}}
+        \hline
+        \textbf{\textit{Dispositivo}} & \textbf{\textit{Descripción}} \\ 
+        \hline
+        Sensor Óptico ThorLabs & Del fabricante ThorLabs con referencia PDA25K(-EC) y ganancia ajustable.\\
+        \hline
+        Bias Tee & RF Microondas HF Bias Tee DC Bias 50K--60\,MHz. Fuente de alimentación de antena activa.\\
+        \hline
+        Low-Noise Amplifier & Amplificador RF banda ancha de alta ganancia (30\,dB), 
+        con rango de operación de 0,1--2000\,MHz.\\
+        \hline
+        Mixer AD831 & Mezclador de un solo chip de amplio rango dinámico y baja distorsión, 
+        opera entre 0,1--500\,MHz con 10\,dBm de ganancia, con condensadores de aislamiento DC.\\
+        \hline
+        RTL2832U & El RTL2832U es un chip popular utilizado en dongles de software-defined radio (SDR).\\
+        \hline
+        USRP 2900 & Del fabricante National Instruments con un rango de operación RF 
+        entre los 70\,MHz--6\,GHz.\\
+        \hline
+        \end{tabular}
+    \end{minipage}
+\end{table*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{table*}[ht!]
+%     \caption{\textbf{Componentes del Transmisor Híbrido.}}
+%     \centering
+%     \footnotesize
+%     \renewcommand{\arraystretch}{1.3}
+%     \begin{tabular}{@{}p{3cm}>{\raggedright\arraybackslash}p{5cm}@{}}
+%     \hline
+%     \textbf{\textit{Dispositivo}} & \textbf{\textit{Descripción}} \\ 
+%     \hline
+%     Low-Noise Amplifier  & Amplificador RF banda ancha de alta ganancia (30\,dB), con rango de Operación de 0,1--2000 MHz. \\
+%     \hline
+%     Mixer - AD831 & Mezclador de un solo chip de amplio rango dinámico y baja distorsión, opera entre 0,1--500\,MHz con 10\,dBm de ganancia, con condensadores de aislamiento DC. \\
+%     \hline
+%     Bias Tee & RF Microondas HF Bias Tee DC Bias 50K--60\,MHz. Fuente de alimentación de antena activa. \\
+%     \hline
+%     LED Azul con Fósforo Amarillo & Linterna de luz blanca convencional con una respuesta en frecuencia típica de 2MHz. \\
+%     \hline
+%     USRP 2900, 2901 & Del fabricante National Instruments con un rango de operación RF entre los 70\,MHz--6\,GHz. \\
+%     \hline
+%     \end{tabular}
+%     \label{Componentes del Transmisor Híbrido.}
+% \end{table*}
+% %%%%%%%%%%%%%%%%%%%%%%%%%
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{table*}[ht!]
+% % \begin{table}[ht!]
+% % \begin{table}[H]
+%     \caption{\textbf{Componentes del Receptor Híbrido.}}
+%     \centering
+%     \footnotesize
+%     \renewcommand{\arraystretch}{1.3}
+%     \begin{tabular}{@{}p{3cm}>{\raggedright\arraybackslash}p{5cm}@{}}
+%     \hline
+%     \textbf{\textit{Dispositivo}} & \textbf{\textit{Descripción}} \\ 
+%     \hline
+%     Sensor Óptico ThorLabs & Del fabricante ThorLabs con referencia PDA25K(-EC) y ganancia ajustable.\\
+%     \hline
+%     Bias Tee & RF Microondas HF Bias Tee DC Bias 50K--60\,MHz. Fuente de alimentación de antena activa.\\
+%     \hline
+%     Low-Noise Amplifier & Amplificador RF banda ancha de alta ganancia (30\,dB), con rango de Operación de 0,1--2000 MHz.\\
+%     \hline
+%     Mixer AD831 & Mezclador de un solo chip de amplio rango dinámico y baja distorsión, opera entre 0,1--500\,MHz con 10\,dBm de ganancia, con condensadores de aislamiento DC.\\
+%     \hline
+%     RTL2832U & El RTL2832U es un chip popular utilizado en dongles de software-defined radio (SDR)\\
+%     \hline
+%     USRP 2900 & Del fabricante {National Instruments} con un rango de operación RF entre los 70\,MHz--6\,GHz.\\
+%     \hline
+%     \end{tabular}
+%     \label{Componentes del Receptor Híbrido}
+% \end{table*}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \clearpage
