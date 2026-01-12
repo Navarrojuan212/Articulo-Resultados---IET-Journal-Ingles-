@@ -36,19 +36,20 @@ This chapter analyzes the current limitations of RF and VLC technologies in indo
 
     
     \begin{table}[ht!]
-    \caption{Tecnologías RF en Diferentes Bandas del Espectro}
+    % \caption{Tecnologías RF en Diferentes Bandas del Espectro}
+    \caption{RF Technologies in Different Spectrum Bands}
     \begin{center}
     \begin{tabular}{cccc}
     \hline
     \textbf{\textit{Tecnología}} & \textbf{\textit{Frec (GHz)}}& \textbf{\textit{Saturación}}& \textbf{\textit{Ref}} \\
     \hline
-    4G LTE, 5G   & 0.8 - 2.6  & Alta & \cite{Kim2019,Lee2022,Qian2020} \\ 
-    WiFi (802.11b/g/n)  &  2.4  & Muy alta  &  \cite{Nasser2021,Ahmad2020}   \\
-    5G (banda C) &  3.5 & En aumento & \cite{Lee2018,Hu2018,Frieden2020}  \\
-    WiFi (802.11a/ac/ax)   &  5 & Alta & \cite{Abid2023,Avallone2021,Chen2020}  \\
-    5G (mmWave) & 24-28 & Baja & \cite{Singh2019,Sung2020,Erofeev2020} \\
-    WiGig & 60 & Baja & \cite{Fierro2020,Liu2022,Kim2021} \\
-    Punto a punto & 70-80 & Muy Baja & \cite{Larsson2020,Liu2021} \\
+    4G LTE, 5G   & 0.8 - 2.6  & High & \cite{Kim2019,Lee2022,Qian2020} \\ 
+    WiFi (802.11b/g/n)  &  2.4  & Very high&  \cite{Nasser2021,Ahmad2020}   \\
+    5G (banda C) &  3.5 & Increasing & \cite{Lee2018,Hu2018,Frieden2020}  \\
+    WiFi (802.11a/ac/ax)   &  5 & High & \cite{Abid2023,Avallone2021,Chen2020}  \\
+    5G (mmWave) & 24-28 & Low & \cite{Singh2019,Sung2020,Erofeev2020} \\
+    WiGig & 60 & Low & \cite{Fierro2020,Liu2022,Kim2021} \\
+    Punto a punto & 70-80 & Very low & \cite{Larsson2020,Liu2021} \\
     \hline
     \end{tabular}
     \label{tabla1}
@@ -60,25 +61,27 @@ This chapter analyzes the current limitations of RF and VLC technologies in indo
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%COPIA TABLA%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{table*}[ht!]
-    \caption{Algunos dispositivos VLC y sus posibles aplicaciones.}
+    % \caption{Algunos dispositivos VLC y sus posibles aplicaciones.}
+    \caption{Some VLC devices and their possible applications.}
     \centering
     % \renewcommand{\arraystretch}{1.3}
     % \begin{tabular}{|c|c|c|>{\raggedright\arraybackslash}p{9cm}|}
     \begin{tabularx}{\textwidth}{cXXc}
     \hline
-    \textbf{\textit{Tipo de Tx y/o Rx }} & \textbf{\textit{Descripción}} & \textbf{\textit{Aplicación }} & \textbf{\textit{Ref}} 
+    % \textbf{\textit{Tipo de Tx y/o Rx }} & \textbf{\textit{Descripción}} & \textbf{\textit{Aplicación }} & \textbf{\textit{Ref}} 
+    \textbf{\textit{Type of Tx and/or Rx}} & \textbf{\textit{Description}} & \textbf{\textit{Application}} & \textbf{\textit{Ref}} 
     \\ \hline
-    RGB LED PAM-4  & Emplea LEDs tricolores para transmitir datos mediante modulación PAM-4. & Sistemas de alta velocidad con baja interferencia. & \cite{Wang2020,Zhou2019}
+    RGB LED PAM-4  & Uses tricolor LEDs to transmit data using PAM-4 modulation. & High-speed systems with low interference. & \cite{Wang2020,Zhou2019}
     \\ \hline
-    LED-to-LED VLC  & Se utiliza un LED tanto transmisor como receptor. Esto permite una comunicación de bajo costo. & Aplicaciones de corto alcance y  bajo costo. & \cite{Mir2021,Pramudya2023}  
+    LED-to-LED VLC  & Both the transmitter and receiver use an LED. This enables low-cost communication. & Short-range, low-cost applications. & \cite{Mir2021,Pramudya2023}  
     \\ \hline
-    \makecell{Silicon Photomultiplier \\(SiPM) Receiver}  & Receptor con SiPM que opera con longitudes de onda de 405 nm. Con alta tasa de transmisión de datos y puede soportar hasta 1 Gbps. & Aplicaciones Indoor, sistemas de comunicación rápidos. & \cite{Ali2020,Ma2023} 
+    \makecell{Silicon Photomultiplier \\(SiPM) Receiver}  & Receiver with SiPM operating at wavelengths of 405 nm. With high data transmission rate and can support up to 1 Gbps. & Indoor applications, high-speed communication systems. & \cite{Ali2020,Ma2023} 
     \\ \hline
-    \makecell{Fotodetector con\\ lentes Fresnel} & Para mejorar la ganancia óptica. Ofrece baja latencia y transmisión robusta. & Sistemas de transporte inteligente y comunicación vehículo-infraestructura. & \cite{Nawaz2020,Younus2023} 
+    \makecell{Photodetector with\\ Fresnel lenses} & To improve optical gain. Offers low latency and robust transmission. & Intelligent transportation systems and vehicle-infrastructure communication. & \cite{Nawaz2020,Younus2023} 
     \\ \hline
-    \makecell{Transmisores LED \\con MOSFET} & Emplea LED y MOSFET como amplificador sumador. Se usa para transmisión en distancias variables con codificación Manchester.& Comunicación vehículo a vehículo e infraestructura. & \cite{Huang2021,Greives2020} 
+    \makecell{LED transmitters \\with MOSFET} & Uses LEDs and MOSFETs as a summing amplifier. Used for transmission over variable distances with Manchester encoding. & Vehicle-to-vehicle and infrastructure communication. & \cite{Huang2021,Greives2020} 
     \\ \hline
-    \makecell{Perovskite Dual-Band \\Photodetector} & Utiliza fotodetectores de perovskita con capacidad de respuesta dual. Puede captar señales de diferentes longitudes de onda. & Comunicación eficiente y de alta velocidad Indoor & \cite{Huang2020} 
+    \makecell{Dual-band perovskite \\Photodetector} & Uses perovskite photodetectors with dual response capability. Can capture signals of different wavelengths. & Efficient, high-speed indoor communication & \cite{Huang2020} 
     \\ \hline
     \end{tabularx}
     \label{tabla2}
@@ -107,21 +110,21 @@ This chapter analyzes the current limitations of RF and VLC technologies in indo
 
     \begin{table}[ht!]
         \centering
-        \caption{Materiales Semiconductores de los LEDs, tomado de \cite{Ghassemlooy2017}.}
+        \caption{Semiconductor materials used in LEDs, taken from \cite{Ghassemlooy2017}.}
         \begin{tabular}{lcl}
         \toprule
-        \textbf{Color}       & \textbf{$\lambda$ (nm)} & \textbf{Material Semiconductor}                                \\
+        \textbf{Color}       & \textbf{$\lambda$ (nm)} & \textbf{Semiconductor Material}                                \\
         \midrule
         \addlinespace[3pt]
         
-        Infrarrojo             & $\lambda > 760$           & GaAs, AlGaAs                                                     \\
-        Rojo                  & $610 < \lambda < 760$     & AlGaAs, GaAsP, AlGaInP, GaP                                       \\
-        Naranja               & $590 < \lambda < 610$     & GaAsP, AlGaInP, GaP                                               \\
-        Amarillo               & $570 < \lambda < 590$     & GaAsP, AlGaInP, GaP                                               \\
-        Verde                & $500 < \lambda < 570$     & InGaN/GaN, GaP, AlGaInP, AlGaP                                    \\
-        Azul                 & $450 < \lambda < 500$     & ZnSe, InGaN                                                       \\
-        Violeta               & $400 < \lambda < 450$     & InGaN                                                             \\
-        Ultravioleta          & $\lambda < 400$           & Diamante, AlGaN, AlGaInN                                           \\
+        Infrared             & $\lambda > 760$           & GaAs, AlGaAs                                                     \\
+        Red                  & $610 < \lambda < 760$     & AlGaAs, GaAsP, AlGaInP, GaP                                       \\
+        Orange               & $590 < \lambda < 610$     & GaAsP, AlGaInP, GaP                                               \\
+        Yellow               & $570 < \lambda < 590$     & GaAsP, AlGaInP, GaP                                               \\
+        Green                & $500 < \lambda < 570$     & InGaN/GaN, GaP, AlGaInP, AlGaP                                    \\
+        Blue                 & $450 < \lambda < 500$     & ZnSe, InGaN                                                       \\
+        Violet               & $400 < \lambda < 450$     & InGaN                                                             \\
+        Ultraviolet          & $\lambda < 400$           & Diamond, AlGaN, AlGaInN                                           \\
         \bottomrule
         \end{tabular}
         \label{LED Semiconductor Materials}
@@ -142,7 +145,7 @@ This chapter analyzes the current limitations of RF and VLC technologies in indo
     %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
 
     \begin{figure*}[ht!]
-    \centerline{\includegraphics[scale=0.5]{figures/figure4.jpg}}
+    \centerline{\includegraphics[scale=0.5]{figures/figure4.pdf}}
     \caption{LOS, NLOS, Diffuse Link, Quasi-diffuse. Estudio tomado de  \cite{Rahman2018}}
     \label{LOS_NLOS}
     \end{figure*}
@@ -155,7 +158,7 @@ This chapter analyzes the current limitations of RF and VLC technologies in indo
     Visible light communication systems rely heavily on Line of Sight (LOS) to achieve optimal performance between the transmitting LED and the receiver. This is key, as diffuse or non-directional configurations limit the achievable rate. LOS increases the intensity of the received signal and implies a higher SNR, which allows for an increase in the data rate or link distance and reduces the risk of Inter-Symbol Interference (ISI) \cite{Ghassemlooy2017} [92]. When obstructions are present, communication links can suffer a significant drop in performance. This LOS dependence has motivated studies to improve blocking tolerance, either through reflective surfaces or beam angle optimization technologies \cite{Cao2019,Hamad2023} [101], [102].
     
     % %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
-    In \Cref{LOS_NLOS} Figure 4, the authors mention four possible configurations (LOS, NLOS, Diffuse, Quasi-Diffuse) which are key to channel modeling and a correct description of a VLC system \cite{Rahman2018} [100]. \Cref{tabla3} summarizes the main issues previously mentioned in visible light communication systems. To mitigate the negative effects of channel distortion and inter-symbol interference in communication systems, various compensation techniques have been developed. These techniques seek to maintain link quality and stability, improving system performance. Next, equalization will be addressed as one of the techniques relevant to our research.
+    In \Cref{LOS_NLOS}, the authors mention four possible configurations (LOS, NLOS, Diffuse, Quasi-Diffuse) which are key to channel modeling and a correct description of a VLC system \cite{Rahman2018} [100]. \Cref{tabla3} summarizes the main issues previously mentioned in visible light communication systems. To mitigate the negative effects of channel distortion and inter-symbol interference in communication systems, various compensation techniques have been developed. These techniques seek to maintain link quality and stability, improving system performance. Next, equalization will be addressed as one of the techniques relevant to our research.
 
 
     \begin{table}[ht!]
@@ -165,11 +168,11 @@ This chapter analyzes the current limitations of RF and VLC technologies in indo
     \hline
     \textbf{\textit{Desafío}} & \textbf{\textit{Descripción}}& \textbf{\textit{Ref}} \\ 
     \hline
-    \makecell{Dependencia\\ de LoS}    & \makecell{VLC requiere una trayectoria \\sin obstrucciones entre el\\ transmisor y el receptor, \\lo que limita su uso en \\ambientes con obstáculos. } & \cite{Rodoplu2020,Zhou2023} \\ 
+    \makecell{Dependence \\ on LoS}    & \makecell{VLC requires a trajectory without \\obstructions between the transmitter \\and receiver, which limits their use \\in environments with obstacles. } & \cite{Rodoplu2020,Zhou2023} \\ 
     \hline
-    \makecell{Interferencia \\Óptica}  & \makecell{La luz ambiental y fuentes de luz\\ artificial causan interferencia \\en los enlaces VLC, afectando \\la claridad de la señal. } & \cite{Forkel2019,affan2020}   \\
+    \makecell{Optical \\ Interference}  & \makecell{Ambient light and light sources artificial\\ sources cause interference in VLC \\links, affecting the original signal.} & \cite{Forkel2019,affan2020}   \\
     \hline
-    \makecell{Desafíos en \\Comunicación \\Bidireccional}  & \makecell{El control bidireccional en VLC es\\ complejo debido a la alineación \\estricta de los dispositivos transmisores\\ y receptores para mantener la LOS. } &\cite{Almohanna2019,Wei2018}  \\
+    \makecell{Challenges in\\Bidirectional\\Communication}  & \makecell{Bidirectional control in VLC is\\ complex due to the strict alignment\\ of the transmitting devices and\\ receivers to maintain LOS. } &\cite{Almohanna2019,Wei2018}  \\
     \hline
     \end{tabular}
     \label{tabla3}
@@ -192,7 +195,8 @@ The combination of pre- and post-equalization can offer additional improvements 
 % %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
 
     \begin{figure*}[ht!]
-    \centerline{\includegraphics[scale=0.34]{figures/RF-VLC/figure5.pdf}}
+    % \centerline{\includegraphics[scale=0.34]{figures/RF-VLC/figure5.pdf}}
+    \centerline{\includegraphics[scale=0.34]{figures/figure5.pdf}}
     % \caption{Amplificador RF y Filtro pasabanda en la entrada del receptor. Tomado de \cite{Carr2000}}
     \caption{Receptor Heterodineo. Tomado de \cite{Carr2000}.}
     \label{Heterorinaje-RF}
@@ -223,7 +227,8 @@ Additionally, to minimize errors and facilitate component integration, the use o
     %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
 
     \begin{figure*}[ht!]
-    \centerline{\includegraphics[scale=0.35]{figures/RF-VLC/figure6.pdf}}
+    % \centerline{\includegraphics[scale=0.35]{figures/RF-VLC/figure6.pdf}}
+    \centerline{\includegraphics[scale=0.35]{figures/figure6.pdf}}
     \caption{Generalidad de los Sistemas VLC-Indoor \cite{Karunatilaka2015}.}
     \label{VLC-Indoor}
     \vspace{10pt} % Espacio opcional entre la leyenda y la línea
@@ -235,8 +240,10 @@ Additionally, to minimize errors and facilitate component integration, the use o
     
 % \subsection{Sistema Híbrido Propuesto}
 \paragraph{Proposed Hybrid System}
-This paper proposes a hybrid communications system that integrates RF technology with a VLC system. The approach is based on a review of the specialized literature and the various studies found, which highlight the complementarity between both domains for scenarios with high spectral demand and localized security \cite{BravoAlvarez2023} [130]. Inspired by these approaches, a design is proposed that takes advantage of the penetration and robustness of RF, together with the directionality, physical security, and wide free spectrum offered by VLC \cite{Wang2023} [131]. The system consists of two main stages: the first stage is the capture and processing of RF signals for conversion to the optical domain; and the second stage is responsible for receiving and demodulating the VLC signal to recover the base information. The range specifications and characteristics of the equipment are presented in \Cref{Componentes del Transmisor Híbrido.} \& \Cref{Componentes del Receptor Híbrido}.
-% \smallskip
+This paper proposes a hybrid communications system that integrates RF technology with a VLC system. The approach is based on a review of the specialized literature and the various studies found, which highlight the complementarity between both domains for scenarios with high spectral demand and localized security \cite{BravoAlvarez2023} [130]. Inspired by these approaches, a design is proposed that takes advantage of the penetration and robustness of RF, together with the directionality, physical security, and wide free spectrum offered by VLC \cite{Wang2023} [131]. The system consists of two main stages: the first stage is the capture and processing of RF signals for conversion to the optical domain; and the second stage is responsible for receiving and demodulating the VLC signal to recover the base information. The range specifications and characteristics of the equipment are presented in  \Cref{tab:tx_hibrido} \&  \Cref{tab:rx_hibrido}.
+% \Cref{Componentes del Transmisor Híbrido.}
+% \Cref{Componentes del Receptor Híbrido.}
+
 \paragraph{Transmission Stage of the RF–VLC Hybrid System}
 In this stage, the RF signal is picked up by an antenna dipole coupled to a USRP 2900; which provides the necessary flexibility for signal processing. This signal is then connected to a low-noise amplification block; it is then fed to an AD831 mixer, which, in conjunction with a local oscillator,
 implements RF heterodyning, shifting the signal to a desired intermediate frequency (IF). It is then coupled to the optical emitter via a bias tee, which is used to apply a DC signal necessary to polarize and turn on the LED, which is used as an optical modulator in an IM/DD scheme to emit the signal in
@@ -245,7 +252,7 @@ the visible light domain \cite{Yeh2015} [132].
     %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
     % \begin{figure*}[ht!]
     \begin{figure*}[ht!]
-    \centerline{\includegraphics[scale=0.565]{figures/RF-VLC/figure7.jpg}}
+    \centerline{\includegraphics[scale=0.4]{figures/figure7.pdf}}
     \caption{Transmisor Híbrido Propuesto.}
     \label{Tx-Hibrido}
     % \vspace{10pt} % Espacio opcional entre la leyenda y la línea
@@ -255,7 +262,7 @@ the visible light domain \cite{Yeh2015} [132].
     %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
     %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
     \begin{figure*}[ht!]
-        \centerline{\includegraphics[scale=0.5]{figures/RF-VLC/figure8.jpg}}
+        \centerline{\includegraphics[scale=0.4]{figures/figure8.pdf}}
         \caption{Rx Híbrido.}
         \label{Rx-Hibrido}
         % \vspace{10pt} % Espacio opcional entre la leyenda y la línea
@@ -286,25 +293,24 @@ The proposed hybrid system offers a functional and reproducible solution that ar
 
     %------------ TABLA IZQUIERDA (TX) -----------------
     \begin{minipage}[t]{0.48\textwidth}
-        \caption{\textbf{Componentes del Transmisor Híbrido.}}
+        % \caption{\textbf{Componentes del Transmisor Híbrido.}}
+        \caption{\textbf{Hybrid Transmitter Components.}}
         \label{tab:tx_hibrido}
         \centering
         \begin{tabular}{@{}p{3cm}>{\raggedright\arraybackslash}p{5cm}@{}}
         \hline
         \textbf{\textit{Dispositivo}} & \textbf{\textit{Descripción}} \\ 
         \hline
-        Low-Noise Amplifier  & Amplificador RF banda ancha de alta ganancia (30\,dB), 
-        con rango de operación de 0,1--2000\,MHz. \\
+        Low-Noise Amplifier  & High-gain broadband RF amplifier (30\,dB), 
+        with an operating range of 0,1--2000\,MHz. \\
         \hline
-        Mixer - AD831 & Mezclador de un solo chip de amplio rango dinámico y baja distorsión, 
-        opera entre 0,1--500\,MHz con 10\,dBm de ganancia, con condensadores de aislamiento DC. \\
+        Mixer - AD831 & Single-chip mixer with wide dynamic range and low distortion, operating between 0,1--500\,MHz with 10\,dBm gain, with DC isolation capacitors. \\
         \hline
-        Bias Tee & RF Microondas HF Bias Tee DC Bias 50K--60\,MHz. Fuente de alimentación de antena activa. \\
+        Bias Tee & RF Microwave HF Bias Tee DC Bias 50K--60\,MHz. Active antenna power supply. \\
         \hline
-        LED Azul con Fósforo Amarillo & Linterna de luz blanca convencional con una respuesta en frecuencia típica de 2\,MHz. \\
+        Blue LED with phosphor yellow & Conventional white light flashlight with a typical frequency response of 2\,MHz. \\
         \hline
-        USRP 2900, 2901 & Del fabricante National Instruments con un rango de operación RF 
-        entre los 70\,MHz--6\,GHz. \\
+        USRP 2900, 2901 & From the manufacturer National Instruments with an RF operating range between 70\,MHz--6\,GHz. \\
         \hline
         \end{tabular}
     \end{minipage}
@@ -318,20 +324,18 @@ The proposed hybrid system offers a functional and reproducible solution that ar
         \hline
         \textbf{\textit{Dispositivo}} & \textbf{\textit{Descripción}} \\ 
         \hline
-        Sensor Óptico ThorLabs & Del fabricante ThorLabs con referencia PDA25K(-EC) y ganancia ajustable.\\
+        ThorLabs Optical Sensor & From the manufacturer ThorLabs with reference PDA25K(-EC) and adjustable gain.\\
         \hline
-        Bias Tee & RF Microondas HF Bias Tee DC Bias 50K--60\,MHz. Fuente de alimentación de antena activa.\\
+        Bias Tee & RF Microwave HF Bias Tee DC Bias 50K--60\,MHz. Active antenna power supply.\\
         \hline
-        Low-Noise Amplifier & Amplificador RF banda ancha de alta ganancia (30\,dB), 
-        con rango de operación de 0,1--2000\,MHz.\\
+        Low-Noise Amplifier  & High-gain broadband RF amplifier (30\,dB), 
+        with an operating range of 0,1--2000\,MHz. \\
         \hline
-        Mixer AD831 & Mezclador de un solo chip de amplio rango dinámico y baja distorsión, 
-        opera entre 0,1--500\,MHz con 10\,dBm de ganancia, con condensadores de aislamiento DC.\\
+        Mixer - AD831 & Single-chip mixer with wide dynamic range and low distortion, operating between 0,1--500\,MHz with 10\,dBm gain, with DC isolation capacitors. \\
         \hline
-        RTL2832U & El RTL2832U es un chip popular utilizado en dongles de software-defined radio (SDR).\\
+        RTL2832U & The RTL2832U is a popular chip used in software-defined radio (SDR) dongles\\
         \hline
-        USRP 2900 & Del fabricante National Instruments con un rango de operación RF 
-        entre los 70\,MHz--6\,GHz.\\
+        USRP 2900 & From the manufacturer National Instruments with an RF operating range between 70\,MHz--6\,GHz. \\
         \hline
         \end{tabular}
     \end{minipage}

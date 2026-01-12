@@ -1,64 +1,17 @@
-\section{Metodología} \label{chap:ch3}
-%%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%     
+\section{METHODOLOGY} \label{chap:ch3}
+
+%%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%
 \begin{figure*}[ht!]
-  \centering
-  \centerline{\includegraphics[scale=0.45]{figures/RF-VLC/figure9.pdf}}
+\centerline{\includegraphics[scale=0.55]{figures/figure9.pdf}}
   \caption{Señal RF tomada desde el exterior y conectada al sistema VLC.}
   \label{Antenayagi}
-\end{figure*}    
-%%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%
+\end{figure*} 
+%%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
+
 This chapter describes in detail the methodology used to achieve convergence between a radio broadcast link and a visible light communication system. The process begins with the capture of the commercial FM signal located at 103.5 MHz in the city of Medellin through a Yagi antenna installed on the fourth floor terrace of the ITM Fraternidad university campus (see diagram in \Cref{Antenayagi}). This signal was connected directly to a USRP, which, together with GNU Radio, allowed it to be processed and subsequently retransmitted at a frequency of 140 MHz.
 
-% \textcolor{blue}{En este capítulo se describe, de manera detallada, la metodología seguida para lograr la convergencia entre un enlace de radiodifusión y un sistema de comunicación por luz visible. El proceso inicia con la captura de la señal comercial de FM situada en los 103.5 MHz en la ciudad de Medellin a través de una antena Yagi instalada en la terraza del cuarto piso del campus universitario ITM Fraternidad (ver esquema de la \Cref{Antenayagi}). Esta señal se conectó directamente a una USRP, que en conjunto con GNU Radio, permitió su procesamiento y posterior retransmisión a una frecuencia de 140 MHz.} 
-% % %%%%%%%%%%%%% Imagenes junstas super chingonas I %%%%%%%%%%%%%%%
-% \begin{figure*}[b]
-%     \centering
-%     % Primera fila
-%     \begin{subfigure}{0.45\textwidth}
-%         \centering
-%         \includegraphics[scale=0.6]{figures/RF-VLC/figure10a.jpg}
-%         \caption{Señal a la salida de la USRP, filtrada y retransmitida a 140 MHz.}
-%         %\caption{Señal In Amplificador Tx 140MHz.}
-%         \label{fig:Senal-In-Amplificador-Tx-140MHz}
-%     \end{subfigure}
-%     \hfill
-%         \begin{subfigure}{0.45\textwidth}
-%         \centering
-%         \includegraphics[scale=0.6]{figures/RF-VLC/figure10b.jpg}
-%         \caption{Señal después del amplificador LNA, utilizada para amplificar la señal recibida.}
-%         %\caption{Señal Out Amplificador Tx 140MHz.}
-%         \label{fig:Senal-Out-Amplificador-Tx-140MHz}
-%     \end{subfigure}
-    
-%     % Segunda fila
-%     \vspace{0.5cm}
-%     \begin{subfigure}{0.45\textwidth}
-%         \centering
-%         \includegraphics[scale=0.6]{figures/RF-VLC/figure10c.jpg}
-%         \caption{Señal a la salida del mezclador, la cual corresponde a la señal de entrada al Bias-T.}
-%         %\caption{Señal Out Mixer Tx 2MHz.}
-%         \label{fig:Senal-Out-Mixer-Tx-2MHz}
-%     \end{subfigure}
-%     \hfill
-%     \begin{subfigure}{0.45\textwidth}
-%         \centering
-%         \includegraphics[scale=0.6]{figures/RF-VLC/figure10d.jpg}
-%         \caption{Señal a la salida del Bias-T, que es la misma señal de entrada al LED.}
-%         \label{fig:Senal-Out-BiasT-Tx-2MHz}
-%     \end{subfigure}
-%     \vspace{0.5cm}
-%     \caption{\textbf{Señales en Distintas Etapas del Transmisor Híbrido,} donde se observa claramente cómo los niveles de potencia de la señal varían a medida que atraviesan las diferentes etapas del transmisor híbrido. Se inicia con una potencia de aproximadamente -52.5 dBm a la salida de la USRP, pasando por los procesos de amplificación y conversión de frecuencia, hasta alcanzar un nivel de -17.1 dBm después del Bias-T, correspondiente a la frecuencia intermedia.
-%         }
-%     \label{fig:ConjuntoSenales}
-% \end{figure*}
-
-% \subsection{Integración de Radiodifusión y Comunicación por Luz Visible}
 \subsection{Integration of Broadcasting and Visible Light Communication}
-
-At each stage of the circuit, measurements were taken using a TinySA portable reference spectrum analyzer to verify the performance of the system. As shown in \Cref{fig:Senal-In-Amplificador-Tx-140MHz}, a signal of -52.5 dBm without a DC component was recorded at the USRP output. After passing through the low-noise amplifier, this signal increased to -11 dBm, which can be clearly seen in \Cref{fig:Senal-Out-Amplificador-Tx-140MHz}.
-
-\textcolor{blue}{En cada etapa del circuito, se realizaron mediciones por medio de un analizador de espectro portátil de referencia {TinySA}\cite{}, para verificar el desempeño del sistema. Como se muestra en la \Cref{fig:Senal-In-Amplificador-Tx-140MHz}, a la salida de la USRP se registró una señal de -52.5 dBm sin componente DC. Tras pasar por el amplificador de bajo ruido, esta señal incrementó hasta -11 dBm, lo cual se observa claramente en la \Cref{fig:Senal-Out-Amplificador-Tx-140MHz}.}
-% \vspace{0.5cm} 
+At each stage of the circuit, measurements were taken using a TinySA portable reference spectrum analyzer to verify the performance of the system. As shown in \Cref{fig:Senal-In-Amplificador-Tx-140MHz}, a signal of -52.5 dBm without a DC component was recorded at the USRP output. After passing through the low-noise amplifier, this signal increased to -11 dBm, which can be clearly seen in \Cref{fig:Senal-Out-Amplificador-Tx-140MHz}. Simultaneously, using a second USRP, a 142 MHz signal was generated as the Local Oscillator frequency, which was combined with the 140 MHz signal using the AD831 mixer, resulting in two frequency components: 2 MHz (difference) and 282 MHz (sum). The 2 MHz component was chosen (see \Cref{fig:Senal-Out-Mixer-Tx-2MHz}) because it was suitable for the typical bandwidth of a conventional LED and simplified optical modulation. This signal, called the intermediate frequency (IF), had a power of -16.1 dBm, indicating an attenuation of approximately 5 dB compared to the previous stage. Finally, the signal was sent to a Bias-T circuit, which provided a DC level to excite the light source without interfering with the information. At the Bias-T output, the measured power was -17.1 dBm (see \Cref{fig:Senal-Out-BiasT-Tx-2MHz}), subsequently connecting to a 3W blue LED with yellow phosphor (obtained from a commercial LED flashlight), thus modulating its light intensity according to the electrical signal received.
 
 % %%%%%%%%%%%%% Imagenes junstas super chingonas I %%%%%%%%%%%%%%%
 \begin{figure*}[ht!]
@@ -66,16 +19,17 @@ At each stage of the circuit, measurements were taken using a TinySA portable re
     % Primera fila
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[scale=0.6]{figures/RF-VLC/figure10a.jpg}
-        \caption{Señal a la salida de la USRP, filtrada y retransmitida a 140 MHz.}
-        %\caption{Señal In Amplificador Tx 140MHz.}
+        \includegraphics[scale=0.6]{figures/figure10/figure10a.jpg}
+        % \caption{Señal a la salida de la USRP, filtrada y retransmitida a 140 MHz.}
+        \caption{Signal at the USRP output, filtered and retransmitted at 140 MHz.}
         \label{fig:Senal-In-Amplificador-Tx-140MHz}
     \end{subfigure}
     \hfill
         \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[scale=0.6]{figures/RF-VLC/figure10b.jpg}
-        \caption{Señal después del amplificador LNA, utilizada para amplificar la señal recibida.}
+        \includegraphics[scale=0.6]{figures/figure10/figure10b.jpg}
+        % \caption{Señal después del amplificador LNA, utilizada para amplificar la señal recibida.}
+        \caption{Signal after the LNA amplifier, used to amplify the received signal.}
         %\caption{Señal Out Amplificador Tx 140MHz.}
         \label{fig:Senal-Out-Amplificador-Tx-140MHz}
     \end{subfigure}
@@ -84,78 +38,83 @@ At each stage of the circuit, measurements were taken using a TinySA portable re
     \vspace{0.5cm}
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[scale=0.6]{figures/RF-VLC/figure10c.jpg}
-        \caption{Señal a la salida del mezclador, la cual corresponde a la señal de entrada al Bias-T.}
+        \includegraphics[scale=0.6]{figures/figure10/figure10c.jpg}
+        % \caption{Señal a la salida del mezclador, la cual corresponde a la señal de entrada al Bias-T.}
+        \caption{Signal at the mixer output, which corresponds to the input signal to the Bias-T.}
         %\caption{Señal Out Mixer Tx 2MHz.}
         \label{fig:Senal-Out-Mixer-Tx-2MHz}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[scale=0.6]{figures/RF-VLC/figure10d.jpg}
-        \caption{Señal a la salida del Bias-T, que es la misma señal de entrada al LED.}
+        \includegraphics[scale=0.6]{figures/figure10/figure10d.jpg}
+        % \caption{Señal a la salida del Bias-T, que es la misma señal de entrada al LED.}
+        \caption{Signal at the Bias-T output, which is the same as the LED input signal.}
         \label{fig:Senal-Out-BiasT-Tx-2MHz}
     \end{subfigure}
-    \vspace{0.5cm}
-    \caption{\textbf{Señales en Distintas Etapas del Transmisor Híbrido,} donde se observa claramente cómo los niveles de potencia de la señal varían a medida que atraviesan las diferentes etapas del transmisor híbrido. Se inicia con una potencia de aproximadamente -52.5 dBm a la salida de la USRP, pasando por los procesos de amplificación y conversión de frecuencia, hasta alcanzar un nivel de -17.1 dBm después del Bias-T, correspondiente a la frecuencia intermedia.
-        }
+    \vspace{0.3cm}
+    \caption{\textbf{Signals at Different Stages of the Hybrid Transmitter}, clearly showing how the signal power levels vary as they pass through the different stages of the hybrid transmitter. It starts with a power of approximately -52.5 dBm at the USRP output, passing through the amplification and frequency conversion processes, until it reaches a level of -17.1 dBm after the Bias-T, corresponding to the intermediate frequency.}
+
     \label{fig:ConjuntoSenales}
 \end{figure*}
-Simultaneously, using a second USRP, a 142 MHz signal was generated as the Local Oscillator frequency, which was combined with the 140 MHz signal using the AD831 mixer, resulting in two frequency components: 2 MHz (difference) and 282 MHz (sum). The 2 MHz component was chosen (see \Cref{fig:Senal-Out-Mixer-Tx-2MHz})
 
-\textcolor{blue}{Simultáneamente, mediante una segunda USRP, se generó una señal de \textbf{142 MHz} como frecuencia para \textbf{Oscilador Local}, la cual combinada con la señal de 140 MHz; por medio del mezclador AD831, consecuentemente se obtuvieron dos componentes en frecuencia: 2 MHz (diferencia) y 282 MHz (suma). Se eligió la componente de 2 MHz (ver \Cref{fig:Senal-Out-Mixer-Tx-2MHz}) por adecuarse al ancho de banda típico de un LED convencional y simplificar la modulación óptica. Esta señal, denominada frecuencia intermedia (FI), presentó una potencia de -16.1 dBm, lo que indica una atenuación aproximada de 5 dB respecto a la etapa anterior. Finalmente, acontinuación, la señal fue enviada a un circuito Bias-T, encargado de proporcionar un nivel DC para excitar la fuente luminosa sin interferir la información. A la salida del Bias-T, la potencia medida fue de -17.1 dBm (ver \Cref{fig:Senal-Out-BiasT-Tx-2MHz}), conectándose posteriormente a un LED azul con fósforo amarillo de 3W (obtenido de una linterna LED comercial), modulando así su intensidad luminosa conforme a la señal eléctrica recibida.}
+% \clearpage
+
+During the reception stage (see \Cref{Rx-Hibrido}), the received signal was demodulated. For this purpose, a ThorLabs PDA25K(-EC) optical reference sensor with variable gain was used, which, according to the manufacturer's specifications, has an effective area of 4.8 mm² and operates in the range of 150 nm to 550 nm, with best sensitivity around 440 nm, within a temperature range between 0°C and 40°C. With a separation distance of 31 cm between the hybrid transmitter (Tx-Hybrid) and the hybrid receiver (Rx-Hybrid), the signal shown in  \Cref{fig:Senal-Rcibida-Sin-Lente-140MHz} was initially captured. It should be noted that this measurement was taken at the end of the Rx-Hybrid module, recording an approximate frequency of 140 MHz with a power of -53 dBm, as a reference for later evaluating the effect of incorporating a Fresnel lens to improve the SNR ratio. 
+
+To analyze the impact of using the aforementioned Fresnel lens, detailed measurements were taken at each stage of the receiver. This lens It was located 13 cm from the ThorLabs optical sensor. It ThorLabs optical was captured sensor initially the optical signal at 2 MHz, after which the DC component was extracted using a Bias-T. As can be seen in \Cref{fig:Senal-In-Amplificador-Rx-2MHz}, the signal at this stage reached -63.1 dBm. Subsequently, the signal entered the low-noise amplifier, registering an output power of -33.6 dBm (see \Cref{fig:Senal-Out-Amplificador-Rx-2MHz}), consistent with the expected gain of the device (approximately 30 dB); the slight difference of 0.5 dBm could be attributed to losses in connections and cables. Continuing with the proposed scheme, the frequency change was performed using an AD831 mixer combined with a signal generated by a 142 MHz local oscillator, again obtaining a signal around 140 MHz. As shown in \Cref{fig:Senal-Rcibida-Lente-140MHz}, the recorded power was approximately -35 dBm, significantly better than the -53 dBm previously observed without the use of the Fresnel lens. This phase successfully concluded the integration of the proposed hybrid system. Additional details will will be presented in the results chapter. The next phase methodology will focus on the statistical analysis of the system.
 
 %%%%%%%%%%%%%%% Imagenes junstas super chingonas II %%%%%%%%%%%%%%%%%
-\begin{figure*}[ht!]
+\begin{figure*}[b!]
     \centering
         \begin{subfigure}{0.45\textwidth}
             \centering
-            \includegraphics[scale=0.6]{figures/RF-VLC/figure11a.jpg}
-            \caption{Señal recibida en la etapa final de recepción sin usar lente de Fresnel.}
+            \includegraphics[scale=0.6]{figures/figure11/figure11a.jpg}
+            % \caption{Señal recibida en la etapa final de recepción sin usar lente de Fresnel.}
+            \caption{Signal received in the final reception stage without using a Fresnel lens}
             \label{fig:Senal-Rcibida-Sin-Lente-140MHz}
         \end{subfigure}
     \hfill
         \begin{subfigure}{0.45\textwidth}
             \centering
-            \includegraphics[scale=0.6]{figures/RF-VLC/figure11b.jpg}
-            \caption{Señal medida a la salida del Bias T, ya sin componente DC usando lente de Fresnel.}
+            \includegraphics[scale=0.6]{figures/figure11/figure11b.jpg}
+            % \caption{Señal medida a la salida del Bias T, ya sin componente DC usando lente de Fresnel.}
+            \caption{Signal measured at the output of Bias T, now without DC component, using a Fresnel lens.}
             \label{fig:Senal-In-Amplificador-Rx-2MHz}
         \end{subfigure}
 
     %segunda fila
-    \vspace{0.2cm}
+    \vspace{0.3cm}
         \begin{subfigure}{0.45\textwidth}
             \centering
-            \includegraphics[scale=0.6]{figures/RF-VLC/figure11c.jpg}
-            \caption{Señal a la salida del amplificador  de bajo ruido, usando lente de Fresnel.}
+            \includegraphics[scale=0.6]{figures/figure11/figure11c.jpg}
+            % \caption{Señal a la salida del amplificador  de bajo ruido, usando lente de Fresnel.}
+            \caption{Signal at the output of the low-noise amplifier, using a Fresnel lens.}
             \label{fig:Senal-Out-Amplificador-Rx-2MHz}
         \end{subfigure}
     \hfill
         \begin{subfigure}{0.45\textwidth}
             \centering
-            \includegraphics[scale=0.6]{figures/RF-VLC/figure11d.jpg}
-            \caption{Señal a la entrada del Doungle RTL2832U, usando lente de Fresnel.}
+            \includegraphics[scale=0.6]{figures/figure11/figure11d.jpg}
+            % \caption{Señal a la entrada del Doungle RTL2832U, usando lente de Fresnel.}
+            \caption{Signal at the input of the RTL2832U dongle, using a Fresnel lens.}
             \label{fig:Senal-Rcibida-Lente-140MHz}
         \end{subfigure}
-    \caption{\textbf{Señales en el Receptor  por etapas.} Aquí se pueden observar dos casos claramente diferenciados considerando una distancia fija entre el transmisor y receptor de 134 cm. La primera imagen corresponde a la señal medida al final de la etapa de recepción sin utilizar lente de Fresnel. Las siguientes tres imágenes presentan las mediciones realizadas en diferentes etapas internas del receptor híbrido propuesto, incluyendo nuevamente la señal al final del circuito receptor, pero ahora utilizando una lente de Fresnel colocada a una distancia de 13 cm del fotodetector. Cabe destacar que la distancia total del enlace óptico se mantuvo constante en ambos casos.}
+        % \vspace{0.5cm}
+        \caption{\textbf{Signals in the receiver by stages.} Here, two clearly differentiated cases can be observed, considering a fixed distance between the transmitter and receiver of 134 cm. The first image corresponds to the signal measured at the end of the reception stage without using a Fresnel lens. The following three images show the measurements taken at different internal stages of the proposed hybrid receiver, including again the signal at the end of the receiver circuit, but now using a Fresnel lens placed at a distance of 13 cm from the photodetector. It should be noted that the total distance of the optical link remained constant in both cases.}
     \label{fig:ConjuntoSenales}
 \end{figure*}
 
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
     \begin{figure*}[ht!]
     \centerline{\includegraphics[scale=0.45]{figures/figure12.png}}
-    \caption{Institución Universitaria ITM, Campus Fraternidad.}
+    \caption{ITM University Institution, Fraternidad Campus.}
+    % \caption{Institución Universitaria ITM, Campus Fraternidad.}
     \label{Campus Fraternidad}
     \end{figure*}
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
 
-En la etapa de  recepción (ver \Cref{Rx-Hibrido}), se realizó el proceso de demodulación de la señal recibida. Para esto se empleó un sensor óptico de referencia ThorLabs PDA25K(-EC) con ganancia variable, el cual, según especificaciones del fabricante, posee un área efectiva de 4.8 mm² y opera en el rango de 150 nm a 550 nm, con mejor sensibilidad alrededor de los 440 nm, dentro de un rango de temperatura entre 0°C y 40°C.
-Con una distancia de separación de 31 cm entre el transmisor híbrido (Tx-Híbrido) y el receptor híbrido (Rx-Híbrido), se capturó inicialmente la señal mostrada en la \Cref{fig:Senal-Rcibida-Sin-Lente-140MHz}. Cabe destacar que esta medición fue realizada al final del módulo Rx-Híbrido, registrando una frecuencia aproximada de 140 MHz con una potencia de -53 dBm, como referencia para evaluar posteriormente el efecto de incorporar una lente de Fresnel para mejorar la relación SNR. 
-Para analizar el impacto del uso de la lente Fresnel mencionada, se realizaron mediciones detalladas en cada etapa del receptor. Esta lente se ubicó a 13 cm del sensor óptico ThorLabs. Se captó inicialmente la señal óptica en 2 MHz, tras lo cual se realizó la extracción de la componente DC mediante un Bias-T. Como se observa en la \Cref{fig:Senal-In-Amplificador-Rx-2MHz}, la señal en esta etapa alcanzó -63.1 dBm. Posteriormente, la señal ingresó al amplificador de bajo ruido, registrándose una salida con potencia de -33.6 dBm (ver \Cref{fig:Senal-Out-Amplificador-Rx-2MHz}), consistente con la ganancia esperada del dispositivo (aproximadamente 30 dB); la ligera diferencia de 0.5 dBm podría atribuirse a pérdidas en conexiones y cables.
-Continuando con el esquema propuesto, se efectuó el cambio de frecuencia utilizando un mezclador AD831 combinado con una señal generada por un oscilador local de 142 MHz, obteniéndose nuevamente una señal alrededor de 140 MHz. Como evidencia la \Cref{fig:Senal-Rcibida-Lente-140MHz}, la potencia registrada fue de aproximadamente -35 dBm, significativamente mejor que los -53 dBm observados previamente sin el uso de la lente Fresnel. Con esta fase se concluyó satisfactoriamente la integración del sistema híbrido propuesto. Los detalles adicionales se presentarán en el capítulo de resultados. La siguiente fase metodológica enfocará el análisis estadístico del sistema.
+\subsection{Experimental Laboratory on SNR Degradation of an Urban Broadcasting Signal}\label{sec:se32}
+In order to analyze how the signal-to-noise ratio (SNR) varies under different urban conditions, a study was conducted using the same commercial signal previously characterized in previous experiments, specifically at 103.5 MHz, within the urban context of Medellín. The analysis was carried out using a USRP device complemented by AIRSPY software. Strategic locations on the Fraternidad campus of the ITM University Institution (as shown in \Cref{Campus Fraternidad}) were chosen to take measurements, ranging from the basements (levels -1 and -2) to the terrace on the sixth floor, including the intermediate floors, which allowed for a comparative evaluation of the signal propagation conditions.
 
-\subsection{Laboratorio Experimental sobre la Degradacion SNR\\ de una Señal de Radiodifusión Urbana} \label{sec:se32}
-
-Con el objetivo de analizar cómo varía la relación señal-ruido (SNR) bajo distintas condiciones urbanas, se realizó un estudio utilizando la misma señal comercial previamente caracterizada en los experimentos anteriores, específicamente en 103.5 MHz, dentro del contexto urbano de Medellín. El análisis se llevó a cabo empleando un dispositivo USRP complementado con el software AIRSPY. Se escogieron ubicaciones estratégicas del campus Fraternidad de la Institución Universitaria ITM (como se aprecia en la \Cref{Campus Fraternidad}) para efectuar las mediciones, abarcando desde los sótanos (niveles -1 y -2) hasta la terraza en el sexto piso, incluyendo los pisos intermedios, lo que permitió evaluar comparativamente las condiciones de propagación de la señal.
-
-\clearpage       
+\clearpage

@@ -1,72 +1,83 @@
-\section{Resultados} \label{chap:ch4}
+\clearpage
+\section{Results} \label{chap:ch4}
 
-\begin{table*}[ht!]
-    \caption{{Datos estadísticos SNR (dB) de los diferentes niveles.}}
-    \centering
-    \renewcommand{\arraystretch}{1.2}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccccccccc@{}}
-    \hline
-    \textbf{\textit{Lugar}} & \textbf{\textit{$Q_1$}} & \textbf{\textit{$\bar{x}$}} & \textbf{\textit{$Q_3$}} & \textbf{\textit{IQR}} & \textbf{\textit{\textcolor{red}{$\downarrow$} Atípico}} & \textbf{\textit{\textcolor{blue}{$\uparrow$} Atípico}} & \textbf{\textit{$\tilde{x}$}} & \textbf{\textit{$\hat{x}$}} & \textbf{\textit{$\sigma^2$}} & \textbf{\textit{$\sigma$}} \\ \hline
-        \rowcolor{blue!6} Piso 1 & 24.06 & 25.07 & 26.05 & 1.99 & 22.08 & 28.06 & 24.98 & 25.45 & 2.44 & 1.56 \\ 
-        Piso 2 & 19.7 & 20.34 & 21.0 & 1.3 & 18.38 & 22.29 & 20.28 & 20.17 & 0.86 & 0.93 \\ 
-        \rowcolor{blue!6} Piso 3 & 19.14 & 20.2 & 21.68 & 2.54 & 16.39 & 24.01 & 19.57 & 19.21 & 3.41 & 1.85 \\ 
-        Piso 4 & 21.03 & 21.93 & 22.63 & 1.6 & 19.52 & 24.33 & 21.92 & 21.15 & 2.35 & 1.53 \\ 
-        \rowcolor{blue!6} Piso 5 & 24.56 & 25.75 & 26.68 & 2.12 & 22.56 & 28.94 & 25.72 & 25.15 & 3.09 & 1.76 \\ 
-        Antena & 28.62 & 29.14 & 29.71 & 1.09 & 27.51 & 30.78 & 28.98 & 28.62 & 0.45 & 0.67 \\ 
-        \rowcolor{blue!6} RF-VLC & 36.02 & \textcolor{blue}{$\uparrow$}36.9 & 37.15 & 0.53 & 36.1 & 37.69 & 36.81 & 36.02 & 0.23 & 0.48 \\ 
-        Sótano 1 & 7.88 & 11.5 & 11.82 & 3.94 & 5.6 & 17.41 & 8.56 & 8.26 & 34.77 & 5.9 \\ 
-        \rowcolor{blue!6} Sótano 2 & 4.61 & \textcolor{red}{$\downarrow$}4.93 & 5.18 & 0.57 & 4.07 & 5.78 & 4.93 & 4.57 & 0.12 & 0.34 \\ 
+    \begin{table*}[ht!]
+        \caption{{SNR (dB) statistical data for the different levels..}}
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccccccccc@{}}
         \hline
-    \end{tabular*}
-    \label{tab:datos-estadisticos}
-\end{table*}
-
-Los datos recopilados se enfocaron principalmente en analizar la relación señal a ruido obtenida en distintos niveles y condiciones del Campus Universitario. Para garantizar la confiabilidad del análisis, se realizó previamente un escalado robusto, debido a la identificación inicial de valores atípicos; ya que al analizar el diagrama de violín ( Ver \Cref{Violinplot}), se observaron claramente valores atípicos significativos, especialmente en el Sótano 1. Este nivel presentó una dispersión notablemente mayor respecto a las otras ubicaciones evaluadas, indicando condiciones menos estables para la calidad del SNR.
+        \textbf{\textit{Location}} & \textbf{\textit{$Q_1$}} & \textbf{\textit{$\bar{x}$}} & \textbf{\textit{$Q_3$}} & \textbf{\textit{IQR}} & \textbf{\textit{\textcolor{red}{$\downarrow$} Outlier}} & \textbf{\textit{\textcolor{blue}{$\uparrow$} Outlier}} & \textbf{\textit{$\tilde{x}$}} & \textbf{\textit{$\hat{x}$}} & \textbf{\textit{$\sigma^2$}} & \textbf{\textit{$\sigma$}} \\ \hline
+            \rowcolor{blue!6} Floor 1 & 24.06 & 25.07 & 26.05 & 1.99 & 22.08 & 28.06 & 24.98 & 25.45 & 2.44 & 1.56 \\ 
+            Floor 2 & 19.7 & 20.34 & 21.0 & 1.3 & 18.38 & 22.29 & 20.28 & 20.17 & 0.86 & 0.93 \\ 
+            \rowcolor{blue!6} Floor 3 & 19.14 & 20.2 & 21.68 & 2.54 & 16.39 & 24.01 & 19.57 & 19.21 & 3.41 & 1.85 \\ 
+            Floor 4 & 21.03 & 21.93 & 22.63 & 1.6 & 19.52 & 24.33 & 21.92 & 21.15 & 2.35 & 1.53 \\ 
+            \rowcolor{blue!6} Floor 5 & 24.56 & 25.75 & 26.68 & 2.12 & 22.56 & 28.94 & 25.72 & 25.15 & 3.09 & 1.76 \\ 
+            Antenna & 28.62 & 29.14 & 29.71 & 1.09 & 27.51 & 30.78 & 28.98 & 28.62 & 0.45 & 0.67 \\ 
+            \rowcolor{blue!6} RF-VLC & 36.02 & \textcolor{blue}{$\uparrow$}36.9 & 37.15 & 0.53 & 36.1 & 37.69 & 36.81 & 36.02 & 0.23 & 0.48 \\ 
+            Basement 1 & 7.88 & 11.5 & 11.82 & 3.94 & 5.6 & 17.41 & 8.56 & 8.26 & 34.77 & 5.9 \\ 
+            \rowcolor{blue!6} Basement 2 & 4.61 & \textcolor{red}{$\downarrow$}4.93 & 5.18 & 0.57 & 4.07 & 5.78 & 4.93 & 4.57 & 0.12 & 0.34 \\ 
+            \hline
+        \end{tabular*}
+        \label{tab:datos-estadisticos}
+    \end{table*}
 
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%     
     \begin{figure*}[b]
     \centering
-    \centerline{\includegraphics[scale=0.4]{figures/Statistical Study/figure13.pdf}}
-    \caption{Diagrama de Violín de Distribuciones SNR de una misma señal de radio frecuencia en diferentes espacios Indoor, muestreados cada 0.1 segundos.}
+    \centerline{\includegraphics[scale=0.4]{figures/figure13.pdf}}
+    % \caption{Diagrama de Violín de Distribuciones SNR de una misma señal de radio frecuencia en diferentes espacios Indoor, muestreados cada 0.1 segundos.}
+    \caption{Violín diagram of SNR distributions for the same radio frequency signal in different indoor spaces, sampled every 0.1 seconds.}
     \label{Violinplot}
     \end{figure*}    
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%
- 
-Estas anomalías en la distribución fueron cuantificadas mediante la prueba de \textbf{Shapiro-Wilk} \cite{ShapiroWilk1965}, que confirmó que los datos recolectados no siguen una distribución normal (\textbf{estadístico}=0.928,  \textbf{p-valor}<0.00). Esta evidencia respalda la elección de análisis estadísticos no paramétricos para las comparaciones posteriores.
-Dado lo anterior, se aplicó la prueba \textbf{Kruskal-Wallis} \cite{Marusteri2010} para comparar los niveles de SNR entre los diferentes grupos evaluados. Los resultados mostraron una diferencia significativa (\textbf{estadístico}=1624.79, \textbf{p-valor}<0.00), indicando claramente que existen diferencias significativas en la calidad del SNR entre los diferentes niveles analizados.
+
+The data collected focused mainly on analyzing the signal-to-noise ratio obtained at different levels and conditions on the university campus. To ensure the reliability of the analysis, robust scaling was performed beforehand, due to the initial identification of outliers; when analyzing the violin plot (see \Cref{Violinplot}), significant outliers were clearly observed, especially in Basement 1. This level showed a significantly greater dispersion than the other locations evaluated, indicating less stable conditions for SNR quality.
+
+These anomalies in the distribution were quantified using the Shapiro-Wilk test \cite{ShapiroWilk1965} [133], which confirmed that the collected data do not follow a normal distribution (\textbf{statistic}=0.928, \textbf{p-valor}=0.00). This evidence supports the choice of nonparametric statistical analyses for subsequent comparisons. Given the above, the Kruskal-Wallis test \cite{Marusteri2010} [134] was applied to compare SNR levels between the different groups evaluated. The results showed a significant difference (\textbf{statistic}=1624.79, \textbf{p-value}=0.00), clearly indicating that there are significant differences in SNR quality between the different levels analyzed.
 
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
 \begin{figure*}[ht!]
     \centering
-    \centerline{\includegraphics[scale=0.55]{figures/Statistical Study/figure14.pdf}}
-    \caption{Diagrama de Dispersión SNR.}
+    \centerline{\includegraphics[scale=0.6]{figures/figure14.pdf}}
+    % \caption{Diagrama de Dispersión SNR.}
+    \caption{SNR Scatter Plot.}
     \label{Scatter}
 \end{figure*}
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%     
     \begin{figure*}[ht!]
     \centering
-    \centerline{\includegraphics[scale=0.55]{figures/Statistical Study/figure15.pdf}}
+    \centerline{\includegraphics[scale=0.6]{figures/figure15.pdf}}
+    % \caption{Histograma SNR.}
     \caption{Histograma SNR.}
     \label{Histograma}
     \end{figure*}    
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
+\smallskip
 
-En la \cref{tab:datos-estadisticos}, la cual es el resumen estadístico que complementa visualmente estos hallazgos, resaltando especialmente la alta calidad del SNR en el sistema propuesto RF-VLC (media=36.9 dB) en contraste con la baja calidad observada en el "Sótano 2" (media=4.93 dB).
-Finalmente, a pesar de la identificación clara de valores atípicos y la ausencia de una distribución normal, estos resultados respaldan positivamente la robustez y eficacia del sistema propuesto. Particularmente, se evidencia que bajo condiciones óptimas como la de "RF-VLC, el sistema supera considerablemente otros escenarios menos favorables, reafirmando el potencial para implementaciones prácticas. 
+\Cref{tab:datos-estadisticos}, which is the statistical summary that visually complements these findings, highlights the high SNR quality in the proposed RF-VLC system (mean=36.9 dB) in contrast to the low quality observed in Basement 2 (mean=4.93 dB). 
 
-En la Figura \ref{Scatter}, las mediciones de dispersión evidencian en los sótanos, una clara tendencia descendente; indicando una degradación significativa de la señal en comparación con los otros niveles. Mientras que los pisos superiores presentan valores de SNR más estables, dado que los sótanos sufren mayores interferencias y absorción de señales, reflejando peores condiciones de transmisión. Una visión más gráfica se puede evidenciar en el histograma de la Figura \ref{Histograma}. Los peores valores de SNR se observan en los sótanos 1 y 2, indicando una mayor degradación de la señal en entornos subterráneos. En contraste, la terraza muestra los mejores valores de SNR, reflejando mejores condiciones de transmisión en comparación con los niveles inferiores.
+Finally, despite the clear identification of outliers and the absence of a normal distribution, these results positively support the robustness and effectiveness of the proposed system. In particular, it is evident that under optimal conditions such as RF-VLC, the system significantly outperforms other less favorable scenarios, reaffirming its potential for practical implementations.
+In  \Cref{Scatter}, dispersion measurements show a clear downward trend in basements, indicating significant signal degradation compared to other levels. Meanwhile, upper floors show more stable SNR values, given that basements suffer greater interference and signal absorption, reflecting poorer transmission conditions. A more graphic view can be seen in the histogram in  \Cref{Histograma}. The worst SNR values are observed in basements 1 and 2, indicating greater signal degradation in underground environments. In contrast, the terrace shows the best SNR values, reflecting better transmission conditions compared to the lower levels.
+
+% En la \cref{tab:datos-estadisticos}, la cual es el resumen estadístico que complementa visualmente estos hallazgos, resaltando especialmente la alta calidad del SNR en el sistema propuesto RF-VLC (media=36.9 dB) en contraste con la baja calidad observada en el "Sótano 2" (media=4.93 dB).
+% Finalmente, a pesar de la identificación clara de valores atípicos y la ausencia de una distribución normal, estos resultados respaldan positivamente la robustez y eficacia del sistema propuesto. Particularmente, se evidencia que bajo condiciones óptimas como la de "RF-VLC, el sistema supera considerablemente otros escenarios menos favorables, reafirmando el potencial para implementaciones prácticas. 
+
+% En la Figura \ref{Scatter}, las mediciones de dispersión evidencian en los sótanos, una clara tendencia descendente; indicando una degradación significativa de la señal en comparación con los otros niveles. Mientras que los pisos superiores presentan valores de SNR más estables, dado que los sótanos sufren mayores interferencias y absorción de señales, reflejando peores condiciones de transmisión. Una visión más gráfica se puede evidenciar en el histograma de la Figura \ref{Histograma}. Los peores valores de SNR se observan en los sótanos 1 y 2, indicando una mayor degradación de la señal en entornos subterráneos. En contraste, la terraza muestra los mejores valores de SNR, reflejando mejores condiciones de transmisión en comparación con los niveles inferiores.
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\clearpage
-\subsection*{\textbf{Casos de Uso}} 
-Ideas de innovación tecnológica.
+% \clearpage
+\newpage 
+\subsection*{\textbf{Use Cases}} 
+Ideas for technological innovation...
 
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
-    \begin{figure*}[b]
-    \centerline{\includegraphics[scale=0.7]{figures/Casos de uso/figure16.png}}
+    \begin{figure*}[b!]
+    \centerline{\includegraphics[scale=0.6]{figures/figure16.png}}
     % \caption{Comunicación Subacuática.}
-        \caption{\textbf{Boya Inteligente RF-VLC para Estudios Marinos,} para facilitar investigaciones oceánicas sostenibles. Su antena RF permitiría comunicación constante con centros de investigación, mientras que el sistema VLC subacuático brindaría transferencia de datos rápida y segura a submarinos y vehículos no tripulados, impulsando estudios detallados sobre biodiversidad marina y cambios climáticos.}
+    \caption{\textbf{Smart Buoy for Marine Studies}, to facilitate sustainable ocean research. Its RF antenna would enable constant communication with research centers, while the underwater VLC system would provide fast and secure data transfer to submarines and unmanned vehicles, promoting detailed studies on marine biodiversity and climate change.}
+        % \caption{\textbf{Boya Inteligente RF-VLC para Estudios Marinos,} para facilitar investigaciones oceánicas sostenibles. Su antena RF permitiría comunicación constante con centros de investigación, mientras que el sistema VLC subacuático brindaría transferencia de datos rápida y segura a submarinos y vehículos no tripulados, impulsando estudios detallados sobre biodiversidad marina y cambios climáticos.}
     \vspace{0.5cm}
     \label{Comunicación Subacuática}
     \end{figure*}     
@@ -77,9 +88,10 @@ Ideas de innovación tecnológica.
 
 %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%
     \begin{figure*}[ht!]
-    \centerline{\includegraphics[scale=0.8]{figures/Casos de uso/figure17.jpg}}
+    \centerline{\includegraphics[scale=0.8]{figures/figure17.jpg}}
     % \caption{Geolocalización para personas con discapacidad visual en estaciones de trenes}
-    \caption{\textbf{Guiado Lumínico para Personas con Discapacidad Visual en Estaciones de Trenes,} mediante señales lumínicas ubicadas estratégicamente en las estaciones de trenes, los usuarios en condiciones especiales de visión, equipados con dispositivos personales podrían orientarse, recibir información en tiempo real sobre rutas, plataformas y advertencias. Logrando así aumentar su autonomía e inclusión en espacios de transporte públicos, (Ver \Cref{Geolocalización para personas con discapacidad visual en estaciones de trenes}).}
+    \caption{\textbf{Light Guidance for Visually Impaired People in Train Stations}, through light signals strategically located in train stations, users with special vision conditions, equipped with personal devices, could orient themselves and receive realtime information on routes, platforms, and warnings. This would increase their autonomy and inclusion in public transport spaces.}
+    % \caption{\textbf{Guiado Lumínico para Personas con Discapacidad Visual en Estaciones de Trenes,} mediante señales lumínicas ubicadas estratégicamente en las estaciones de trenes, los usuarios en condiciones especiales de visión, equipados con dispositivos personales podrían orientarse, recibir información en tiempo real sobre rutas, plataformas y advertencias. Logrando así aumentar su autonomía e inclusión en espacios de transporte públicos, (Ver \Cref{Geolocalización para personas con discapacidad visual en estaciones de trenes}).}
     \label{Geolocalización para personas con discapacidad visual en estaciones de trenes}
     \end{figure*}
 % %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
@@ -88,10 +100,12 @@ Ideas de innovación tecnológica.
 
 %%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{figure*}[htbp]
-    \centerline{\includegraphics[scale=0.65]{figures/Casos de uso/figure18.jpg}}
+    \centerline{\includegraphics[scale=0.7]{figures/figure18.jpg}}
     % \caption{Minería Sostenible.}
-    \caption{\textbf{Minería Sostenible,} en ambientes donde la seguridad y sostenibilidad son prioritarias, la combinación de RF y VLC asegura comunicaciones confiables y eficientes. Mineros equipados con cascos inteligentes pueden recibir información crítica a través de luces integradas en la infraestructura minera, mejorando la seguridad laboral, reduciendo accidentes y fomentando una operación minera sostenible y consciente del entorno. (Ver \Cref{Minería Sostenible}).}
+    \caption{\textbf{Sustainable Mining}, in environments where safety and sustainability are priorities, the combination of RF and VLC ensures reliable and efficient communications. Miners equipped with smart helmets can receive critical information through lights integrated into the mining infrastructure, improving workplace safety, reducing accidents, and promoting sustainable and environmentally conscious mining operations.}
+    % \caption{\textbf{Minería Sostenible,} en ambientes donde la seguridad y sostenibilidad son prioritarias, la combinación de RF y VLC asegura comunicaciones confiables y eficientes. Mineros equipados con cascos inteligentes pueden recibir información crítica a través de luces integradas en la infraestructura minera, mejorando la seguridad laboral, reduciendo accidentes y fomentando una operación minera sostenible y consciente del entorno. (Ver \Cref{Minería Sostenible}).}
     \label{Minería Sostenible}
     \end{figure*}
 %%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\vspace{1cm}
