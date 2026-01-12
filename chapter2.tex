@@ -150,7 +150,7 @@ This chapter analyzes the current limitations of RF and VLC technologies in indo
     Visible light communication systems rely heavily on Line of Sight (LOS) to achieve optimal performance between the transmitting LED and the receiver. This is key, as diffuse or non-directional configurations limit the achievable rate. LOS increases the intensity of the received signal and implies a higher SNR, which allows for an increase in the data rate or link distance and reduces the risk of Inter-Symbol Interference (ISI) \cite{Ghassemlooy2017}. When obstructions are present, communication links can suffer a significant drop in performance. This LOS dependence has motivated studies to improve blocking tolerance, either through reflective surfaces or beam angle optimization technologies \cite{Cao2019,Hamad2023}.
     
     % %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
-    In \Cref{LOS_NLOS}, the authors mention four possible configurations (LOS, NLOS, Diffuse, Quasi-Diffuse) which are key to channel modeling and a correct description of a VLC system \cite{Rahman2018} [100]. \Cref{tabla3} summarizes the main issues previously mentioned in visible light communication systems. To mitigate the negative effects of channel distortion and inter-symbol interference in communication systems, various compensation techniques have been developed. These techniques seek to maintain link quality and stability, improving system performance. Next, equalization will be addressed as one of the techniques relevant to our research.
+    In \Cref{LOS_NLOS}, the authors mention four possible configurations (LOS, NLOS, Diffuse, Quasi-Diffuse) which are key to channel modeling and a correct description of a VLC system \cite{Rahman2018}. \Cref{tabla3} summarizes the main issues previously mentioned in visible light communication systems. To mitigate the negative effects of channel distortion and inter-symbol interference in communication systems, various compensation techniques have been developed. These techniques seek to maintain link quality and stability, improving system performance. Next, equalization will be addressed as one of the techniques relevant to our research.
 
 
     \begin{table}[ht!]
@@ -238,7 +238,8 @@ In this stage, the RF signal is picked up by an antenna dipole coupled to a USRP
     % \begin{figure*}[ht!]
     \begin{figure*}[ht!]
     \centerline{\includegraphics[scale=0.45]{figures/figure7.pdf}}
-    \caption{Transmisor Híbrido Propuesto.}
+    \caption{Proposed Hybrid Transmitter.}
+    % \caption{Transmisor Híbrido Propuesto.}
     \label{Tx-Hibrido}
     % \vspace{10pt} % Espacio opcional entre la leyenda y la línea
     \rule{\textwidth}{0.2pt} % Mismo ancho que la imagen
@@ -248,7 +249,8 @@ In this stage, the RF signal is picked up by an antenna dipole coupled to a USRP
     %%%%%%%%%%%%%%% Figura chingona %%%%%%%%%%%%%%% 
     \begin{figure*}[ht!]
         \centerline{\includegraphics[scale=0.45]{figures/figure8.pdf}}
-        \caption{Rx Híbrido.}
+        \caption{Proposed Hybrid Receiver.}
+        % \caption{Rx Híbrido.}
         \label{Rx-Hibrido}
         % \vspace{10pt} % Espacio opcional entre la leyenda y la línea
         % \rule{\textwidth}{0.2pt} % Mismo ancho que la imagen
@@ -284,7 +286,7 @@ The proposed hybrid system offers a functional and reproducible solution that ar
         \centering
         \begin{tabular}{@{}p{3cm}>{\raggedright\arraybackslash}p{5cm}@{}}
         \hline
-        \textbf{\textit{Dispositivo}} & \textbf{\textit{Descripción}} \\ 
+        \textbf{\textit{Device}} & \textbf{\textit{Description}} \\ 
         \hline
         Low-Noise Amplifier  & High-gain broadband RF amplifier (30\,dB), 
         with an operating range of 0,1--2000\,MHz. \\
@@ -302,12 +304,13 @@ The proposed hybrid system offers a functional and reproducible solution that ar
     \hfill
     %------------ TABLA DERECHA (RX) -----------------
     \begin{minipage}[t]{0.48\textwidth}
-        \caption{\textbf{Componentes del Receptor Híbrido.}}
+        \caption{\textbf{Hybrid Receiver Components.}}
+        % \caption{\textbf{Componentes del Receptor Híbrido.}}
         \label{tab:rx_hibrido}
         \centering
         \begin{tabular}{@{}p{3cm}>{\raggedright\arraybackslash}p{5.7cm}@{}}
         \hline
-        \textbf{\textit{Dispositivo}} & \textbf{\textit{Descripción}} \\ 
+        \textbf{\textit{Device}} & \textbf{\textit{Description}} \\ 
         \hline
         ThorLabs Optical Sensor & From the manufacturer ThorLabs with reference PDA25K(-EC) and adjustable gain.\\
         \hline
@@ -325,61 +328,5 @@ The proposed hybrid system offers a functional and reproducible solution that ar
         \end{tabular}
     \end{minipage}
 \end{table*}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{table*}[ht!]
-%     \caption{\textbf{Componentes del Transmisor Híbrido.}}
-%     \centering
-%     \footnotesize
-%     \renewcommand{\arraystretch}{1.3}
-%     \begin{tabular}{@{}p{3cm}>{\raggedright\arraybackslash}p{5cm}@{}}
-%     \hline
-%     \textbf{\textit{Dispositivo}} & \textbf{\textit{Descripción}} \\ 
-%     \hline
-%     Low-Noise Amplifier  & Amplificador RF banda ancha de alta ganancia (30\,dB), con rango de Operación de 0,1--2000 MHz. \\
-%     \hline
-%     Mixer - AD831 & Mezclador de un solo chip de amplio rango dinámico y baja distorsión, opera entre 0,1--500\,MHz con 10\,dBm de ganancia, con condensadores de aislamiento DC. \\
-%     \hline
-%     Bias Tee & RF Microondas HF Bias Tee DC Bias 50K--60\,MHz. Fuente de alimentación de antena activa. \\
-%     \hline
-%     LED Azul con Fósforo Amarillo & Linterna de luz blanca convencional con una respuesta en frecuencia típica de 2MHz. \\
-%     \hline
-%     USRP 2900, 2901 & Del fabricante National Instruments con un rango de operación RF entre los 70\,MHz--6\,GHz. \\
-%     \hline
-%     \end{tabular}
-%     \label{Componentes del Transmisor Híbrido.}
-% \end{table*}
-% %%%%%%%%%%%%%%%%%%%%%%%%%
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{table*}[ht!]
-% % \begin{table}[ht!]
-% % \begin{table}[H]
-%     \caption{\textbf{Componentes del Receptor Híbrido.}}
-%     \centering
-%     \footnotesize
-%     \renewcommand{\arraystretch}{1.3}
-%     \begin{tabular}{@{}p{3cm}>{\raggedright\arraybackslash}p{5cm}@{}}
-%     \hline
-%     \textbf{\textit{Dispositivo}} & \textbf{\textit{Descripción}} \\ 
-%     \hline
-%     Sensor Óptico ThorLabs & Del fabricante ThorLabs con referencia PDA25K(-EC) y ganancia ajustable.\\
-%     \hline
-%     Bias Tee & RF Microondas HF Bias Tee DC Bias 50K--60\,MHz. Fuente de alimentación de antena activa.\\
-%     \hline
-%     Low-Noise Amplifier & Amplificador RF banda ancha de alta ganancia (30\,dB), con rango de Operación de 0,1--2000 MHz.\\
-%     \hline
-%     Mixer AD831 & Mezclador de un solo chip de amplio rango dinámico y baja distorsión, opera entre 0,1--500\,MHz con 10\,dBm de ganancia, con condensadores de aislamiento DC.\\
-%     \hline
-%     RTL2832U & El RTL2832U es un chip popular utilizado en dongles de software-defined radio (SDR)\\
-%     \hline
-%     USRP 2900 & Del fabricante {National Instruments} con un rango de operación RF entre los 70\,MHz--6\,GHz.\\
-%     \hline
-%     \end{tabular}
-%     \label{Componentes del Receptor Híbrido}
-% \end{table*}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \clearpage
